@@ -57,7 +57,7 @@ table {
 }
 
 body{
-    background-color: green;
+    background-color: var(--BgLigthTeme);
 }
 
 .header{
