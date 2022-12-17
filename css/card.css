@@ -1,0 +1,12 @@
+.cardContainer{
+    width: 95%;
+    margin-bottom: 1em;
+}
+
+.cardContainer__imgContainer{
+    width: 100%;
+}
+
+.productImg{
+    width: 100%;
+}
