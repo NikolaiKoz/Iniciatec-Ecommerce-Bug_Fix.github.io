@@ -1,6 +1,7 @@
 :root{
     /* <---------- LIGTH THEME COLORS ----------> */
-    --BgLigthTeme: #ebe4cc;
+    --BgLigthTeme: rgb(235,228,204);
+    --LightGreen: #44f706;
 
     /* <---------- DARK THEME COLORS ----------> */
 
