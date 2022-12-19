@@ -1,0 +1,21 @@
+.bannerCarousel,
+.carouselImgContainer{
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+}
+
+.carouselImgContainer__img{
+    min-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 1440px) {
+    .bannerCarousel,
+    .carouselImgContainer{
+        height: 375px;
+    }
+}
