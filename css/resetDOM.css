@@ -84,7 +84,7 @@ body{
 
 .imgContainerLogo{
     height: 100%;
-    max-width: 120px;
+    max-width: 100px;
 }
 
 .imgContainer{
@@ -101,6 +101,7 @@ body{
 .imgIcon{
  height: 16px;
 }
+
 .imgLogo{
     width: 100%;
 
@@ -109,7 +110,7 @@ body{
 .inputSearch{
     background-color: #f6fbf2;
     opacity: 90%;
-    height: 20px;
+    height: 30px;
     border: none;
     border-radius: 5px;
     padding-left: 15px;
@@ -124,13 +125,21 @@ body{
 
 .userInfoContainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
     align-items: center;
 }
 
+.userInfoContainer > img{
+    margin-left: 5px;
+}
+
 .userInfo{
     font-size: .668rem;
+}
+
+.margin{
+    margin-right: 10px;
 }
 
 /* MAIN */
@@ -151,10 +160,6 @@ body{
     height: 100%;
     width: 100%;
 }
-
-
-
-
 
 /* FOOTER */
 
