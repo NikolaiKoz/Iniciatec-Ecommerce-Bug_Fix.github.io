@@ -166,6 +166,7 @@ body{
 .footer{
     background-color: var(--LightGreen);
     width: 100vw;
+    height: 100px;
     display: flex;
     justify-content: space-evenly;
 }
