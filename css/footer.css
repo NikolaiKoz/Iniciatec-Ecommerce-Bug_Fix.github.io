@@ -2,7 +2,7 @@
 .footer{
     overflow-x: hidden;
     background-color: var(--LightGreen);
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
