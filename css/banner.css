@@ -1,21 +1,60 @@
-.bannerCarousel,
-.carouselImgContainer{
+.bannerCarousel{
     height: 200px;
     width: 100%;
+    transition: all 0.4s ease;
     overflow: hidden;
+}
+
+.carousel_box{
+    width: 400%;
+    height: 170px;
     display: flex;
     align-items: center;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
     background-color: aqua;
 }
 
+.carouselImgContainer{
+    width: calc(100% / 4);
+    height: 100%;
+    overflow: hidden;
+}
+
 .carouselImgContainer__img{
-    min-width: 100%;
+    width: 100%;
     height: auto;
+    transition: all 0.4s ease;
+}
+
+.carousel_dots{
+    width: 100%;
+    padding: 0.4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel_dot{
+    width: 1em;
+    height: 1em;
+    margin: 0.5em 1em 0;
+    background-color: var(--Grey);
+    transition: all 0.4s ease;
+    border-radius: 0.5em;
+    z-index: 1;
+}
+
+.activ{
+    background-color: var(--Fuccia);
 }
 
 @media screen and (min-width: 1440px) {
-    .bannerCarousel,
-    .carouselImgContainer{
+    .bannerCarousel{
+        height: 410px;
+    }
+    .carousel_box{
         height: 375px;
     }
 }
