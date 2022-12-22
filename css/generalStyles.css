@@ -6,6 +6,7 @@
 body{
     font-family: 'Roboto Mono', monospace;
     background-color: black;
+    color: var(--text);
 }
 
 .header{
@@ -48,7 +49,12 @@ body{
 }
 
 .imgIcon{
- height: 16px;
+ height: 20px;
+ filter: invert(100%);
+}
+
+.imgIconLens{
+    height: 20px;
 }
 
 .imgLogo{
@@ -62,19 +68,20 @@ body{
     height: 30px;
     border: none;
     border-radius: 5px;
-    padding-left: 15px;
+    padding-left: 20px;
     width: 100%;
 }
 
 .userData{
-    width: 100%;
+    width: 70%;
     height: 50%;
     display: flex;
+    float: right;
 }
 
 .userInfoContainer{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
     align-items: center;
 }
@@ -110,20 +117,6 @@ body{
     width: 100%;
 }
 
-/* FOOTER */
-
-.footer{
-    border-top: 1px solid #fff;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.imgContainerFooter{
-    display: flex;
-    height: 16px;
-}
-
 /* HR */
 
 .hr{
@@ -131,7 +124,6 @@ body{
     height: 10px;
     border: none;
     position: relative;
-    margin: 1em 0;
 }
 
 .hr::before{
@@ -146,6 +138,5 @@ body{
     red, blue, deeppink, yellow, green, blue, red);
     background-size: 800%;
     border-radius: 1.5em;
-    filter: blur(1.5em);
     animation: animate 20s linear infinite;
 }
