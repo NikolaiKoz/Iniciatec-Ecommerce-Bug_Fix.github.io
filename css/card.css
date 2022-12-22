@@ -10,8 +10,6 @@
     background: rgb(0, 0, 0);
     position: relative;
     margin: 2em auto 0 auto;
-    border: 2px solid #7610AF;
-    /* z-index: 1; Efecto*/
 }
 
 .card__Container::before{
