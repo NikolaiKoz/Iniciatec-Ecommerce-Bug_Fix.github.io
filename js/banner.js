@@ -71,7 +71,6 @@ const carouselTransition = ()=>{
         carouselBox.style.transform = `translateX(${ move }%)`
         count++
         if(count == carouselItem.length){
-            console.log('entró')
             setTimeout(function(){
                 carouselBox.style.transform = "translate(0%)";
                 carouselBox.style.transition = "transform 0s";

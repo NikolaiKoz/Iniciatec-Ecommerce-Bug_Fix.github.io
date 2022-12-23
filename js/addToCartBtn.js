@@ -6,7 +6,7 @@ let totalInCart = 0;
 
 const addEventCartBtn = ()=>{
     const addToCartBtn = document.querySelectorAll(".btn__card")
-    
+
     // creo array de productos vacío
     let allProducts = [];
 
@@ -19,7 +19,7 @@ const addEventCartBtn = ()=>{
 
             // capturo la card del producto
             const cardProduct = cartBtn.parentElement.parentElement.parentElement;
-            
+
             // creo un objeto con toda la informacion del producto seleccionado
             let productInfo = {
                 id: cardProduct.querySelector(".product__id").textContent,
@@ -48,7 +48,7 @@ const addEventCartBtn = ()=>{
 
                         return product; // si es, retorno el producto modificado
                     } else {
-                        return product; // si no es, retorno el producto sin modificaciones 
+                        return product; // si no es, retorno el producto sin modificaciones
                     }
                 })
                 setProductsInLocalStorage(allProducts);
@@ -57,15 +57,15 @@ const addEventCartBtn = ()=>{
                 productInfo.stock--;
 
                 totalInCart += productInfo.price;
-                
+
                 allProducts = [...allProducts, productInfo];
 
                 setProductsInLocalStorage(allProducts);
             }
 
-            console.log(allProducts)
-            console.log("productos en el carrito:", productsInCart)
-            console.log("total a pagar", totalInCart)
+        alertCart();
+
+
         })
     })
 }

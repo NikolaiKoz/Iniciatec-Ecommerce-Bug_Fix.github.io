@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/banner.css">
     <link rel="stylesheet" href="./css/card.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/alertCart.css">
     <title>Index</title>
   </head>
   <body>
@@ -37,12 +38,13 @@
           <input class="inputSearch" type="text" placeholder="Search" />
         </section>
 
-        <figure class="imgContainer">
+        <figure class="imgContainer alertCartContainer">
           <img
             class="imgIcon"
             src="./assets/img/icons/cart.png"
             alt="Cart icon"
           />
+          <span class="alertCart hide">0</span>
         </figure>
       </section>
 
@@ -174,5 +176,6 @@
     <script src="/js/banner.js"></script>
     <script src="/js/renderCards.js"></script>
     <script src="./js/addToCartBtn.js"></script>
+    <script src="./js/alertCart.js"></script>
   </body>
 </html>
