@@ -10,10 +10,13 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 
 ## Authors
 
-|   |   |   |   |
+|<img src="https://avatars.githubusercontent.com/u/113448691?v=4" width=200>|<img src="https://avatars.githubusercontent.com/u/98178495?v=4" width=200>|<img src="https://avatars.githubusercontent.com/u/98178495?v=4" width=200>|<img src="https://avatars.githubusercontent.com/u/98178495?v=4" width=200>|
 |:-:|:-:|:-:|:-:|
-|   |   |   |   |
-|   |   |   |   |
+|Gartner, Maximiliano|Heredia Valverde, Camila Solange|Morales, Maria del Rocío|Vallejos, Jose Luis|
+|Frontend Developer|Frontend Developer|Frontend Developer|Scrum Master|
+|[<img src="./assets/img/logo/Logo-Linkedin.png" width=100>](https://www.linkedin.com/in/maxi-gartner/)|[<img src="./assets/img/logo/Logo-Linkedin.png" width=100>](https://www.linkedin.com/in/camila-herediav/)|[<img src="./assets/img/logo/Logo-Linkedin.png" width=100>](https://www.linkedin.com/in/mar%C3%ADa-del-roc%C3%ADo-morales-72389011b/)|[<img src="./assets/img/logo/Logo-Linkedin.png" width=100>](https://www.linkedin.com/in/vallejosjoseluis/)|
+|[<img src="./assets/img/logo/GitHub-Emblem.png" width=100>](https://github.com/maxi-gartner)|[<img src="./assets/img/logo/GitHub-Emblem.png" width=100>](https://github.com/camilaheredia9)|[<img src="./assets/img/logo/GitHub-Emblem.png" width=100>](https://github.com/Rochius)|[<img src="./assets/img/logo/GitHub-Emblem.png" width=100>](https://github.com/NikolaiKoz)|
+
 
 #
 
