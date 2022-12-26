@@ -1,0 +1,88 @@
+/* TODOS LOS COLORES SON PROVISORIOS */
+.footer{
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 0;
+}
+.imgContainerFooter{
+    display: flex;
+}
+
+
+
+footer h3{
+    text-align: center;
+    margin-bottom: 0.6rem;
+}
+footer .imgIcon{
+    padding-right: 0.6rem;
+}
+footer ul li{
+    border: 0.1rem solid rgb(157, 156, 156);
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    margin: 0.6rem;
+    font-size: 1rem;
+    background-color: #000;
+    position: relative;
+}
+
+footer ul li figure{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+footer ul li:hover{
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+footer ul li::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+footer ul li:hover::before{
+    background: linear-gradient(45deg,
+    red, blue, deeppink, yellow, green, blue, red);
+    background-size: 800%;
+    animation: animate 20s linear infinite;
+}
+
+footer ul li a:hover{
+    color: #fff;
+    transition: all 0.2s;
+}
+
+/* FOR DEVICES FROM 1140px */
+@media (min-width: 1140px) {
+    .footer{
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5.5rem 1rem 4.5rem;
+    }
+    .footer h3{
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    .authors ul{
+        display: flex;
+    }
+    .footer ul li{
+        font-size: 1.2rem;
+    }
+}

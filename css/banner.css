@@ -10,9 +10,6 @@
     height: 170px;
     display: flex;
     align-items: center;
-    transition: all 0.5s ease;
-    transform: translateX(0%);
-    background-color: aqua;
 }
 
 .carouselImgContainer{
@@ -37,6 +34,7 @@
 }
 
 .carousel_dot{
+    cursor: pointer;
     width: 1em;
     height: 1em;
     margin: 0.5em 1em 0;

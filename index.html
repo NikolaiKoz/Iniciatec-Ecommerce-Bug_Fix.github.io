@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/colorsLight.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/resetDOM.css" />
+    <link rel="stylesheet" href="./css/generalStyles.css">
+    <link rel="stylesheet" href="./css/colorsLight.css">
     <link rel="stylesheet" href="./css/banner.css">
     <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/alertCart.css">
     <title>Index</title>
   </head>
   <body>
     <!-- HEADER -->
-    <h1 class="hiden">BUG FIX</h1>
+    <h1 class="neonText">BUG FIX</h1>
     <header class="header">
       <section class="logoAndSearchContainer">
         <picture class="imgContainerLogo">
@@ -26,20 +30,49 @@
         <section class="inputSearchContainer">
           <figure class="imgContainer lens">
             <img
-              class="imgIcon"
+              class="imgIconLens"
               src="./assets/img/icons/lens.png"
               alt="Lens icon"
             />
           </figure>
-          <input class="inputSearch" type="text" placeholder="Search" />
+          <input id="searchBar" class="inputSearch" type="text" placeholder="Search" />
         </section>
 
-        <figure class="imgContainer">
+        <figure class="imgContainer alertCartContainer">
           <img
             class="imgIcon"
             src="./assets/img/icons/cart.png"
             alt="Cart icon"
           />
+          <span class="alertCart hide">0</span>
+
+          <section class="resumeCart">
+
+            <figure class="resumeContainer">
+              <img src="./assets/img/logo/barbie.png" alt="Product Img" class="resumeImg">
+              <figcaption class="resumeText">
+                <h3 class="resumeTitle">Barbie</h3>
+                <p class="resumePrice">$100</p>
+            </figure>
+
+            <figure class="resumeContainer">
+              <img src="./assets/img/logo/barbie.png" alt="Product Img" class="resumeImg">
+              <figcaption class="resumeText">
+                <h3 class="resumeTitle">Barbie</h3>
+                <p class="resumePrice">$100</p>
+            </figure>
+
+            <figure class="resumeContainer">
+              <img src="./assets/img/logo/barbie.png" alt="Product Img" class="resumeImg">
+              <figcaption class="resumeText">
+                <h3 class="resumeTitle">Barbie</h3>
+                <p class="resumePrice">$100</p>
+            </figure>
+
+
+            <button class="buyBtn">BUY</button>
+          </section>
+
         </figure>
       </section>
 
@@ -66,6 +99,8 @@
         </figure>
       </section>
     </header>
+
+   <div class="hr"></div>
     <!-- MAIN -->
     <main class="main">
         <article class="bannerCarousel">
@@ -107,43 +142,16 @@
           </ul>
         </article>
 
-        <h2>ESTO ES EL MAIn</h2>
 
-        <article class="cardContainer">
-            <figure class="cardContainer__imgContainer">
-                <img class="productImg" src="./assets/img/banners/Computer-Deals-November-2017.jpg" alt="${PRODUCT NAME}">
-                <figcaption>
-                    <h3>${PRODUCT NAME}</h3>
-                    <p>${PRODUCT PRICE}</p>
-                </figcaption>
-            </figure>
-        </article>
-
-        <article class="cardContainer">
-            <figure class="cardContainer__imgContainer">
-                <img class="productImg" src="./assets/img/banners/diferencia-entre-banner-y-slider.webp" alt="${PRODUCT NAME}">
-                <figcaption>
-                    <h3>${PRODUCT NAME}</h3>
-                    <p>${PRODUCT PRICE}</p>
-                </figcaption>
-            </figure>
-        </article>
-
-        <article class="cardContainer">
-            <figure class="cardContainer__imgContainer">
-                <img class="productImg" src="./assets/img/banners/promotions-min-copy-1024x576.jpg" alt="${PRODUCT NAME}">
-                <figcaption>
-                    <h3>${PRODUCT NAME}</h3>
-                    <p>${PRODUCT PRICE}</p>
-                </figcaption>
-            </figure>
-        </article>
-
-
-
+        <section class="products__Container" id="products__Container">
+          <!-- Is rendered in renderCards.js -->
+        </section>
 
 
     </main>
+
+   <div class="hr"></div>
+
     <!-- FOOTER -->
     <footer class="footer">
         <picture class="imgContainerLogo">
@@ -154,47 +162,19 @@
             />
           </picture>
 
-          <section class="authors">
-            <h3>Authors</h3>
-            <ul>
-              <li>
-                <a href="">
-                    <figure class="imgContainerFooter">
-                        <img class="imgIcon" src="./assets/img/icons/github.png" alt="Github Icon">
-                        <figcaption>Author 1</figcaption>
-                    </figure>
-                </a>
-              </li>
-
-              <li>
-                <a href="">
-                    <figure class="imgContainerFooter">
-                        <img class="imgIcon" src="./assets/img/icons/github.png" alt="Github Icon">
-                        <figcaption>Author 1</figcaption>
-                    </figure>
-                </a>
-              </li>
-
-              <li>
-                <a href="">
-                    <figure class="imgContainerFooter">
-                        <img class="imgIcon" src="./assets/img/icons/github.png" alt="Github Icon">
-                        <figcaption>Author 1</figcaption>
-                    </figure>
-                </a>
-              </li>
-
-              <li>
-                <a href="">
-                    <figure class="imgContainerFooter">
-                        <img class="imgIcon" src="./assets/img/icons/github.png" alt="Github Icon">
-                        <figcaption>Author 1</figcaption>
-                    </figure>
-                </a>
-              </li>
-
-            </ul>
+        <section class="authors">
+          <h3>Authors</h3>
+          <ul id="list-authors">
+          </ul>
           </section>
     </footer>
+    <script src="https://kit.fontawesome.com/7363efb40e.js" crossorigin="anonymous"></script>
+    <script src="/js/banner.js"></script>
+    <script src="./js/renderFooter.js"></script>
+    <script src="./js/searchBar.js"></script>
+    <script src="/js/renderCards.js"></script>
+    <script src="./js/addToCartBtn.js"></script>
+    <script src="./js/alertCart.js"></script>
+    <script src="./js/resumeCart.js"></script>
   </body>
 </html>

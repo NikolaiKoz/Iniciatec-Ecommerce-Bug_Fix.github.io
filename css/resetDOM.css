@@ -48,6 +48,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+<<<<<<< HEAD
 
 /* TEST */
 
@@ -179,3 +180,5 @@ body{
 .hiden{
     display: none;
 }
+=======
+>>>>>>> ddb2e09ed329af3858ef5a9ffe7b97702f1f2595

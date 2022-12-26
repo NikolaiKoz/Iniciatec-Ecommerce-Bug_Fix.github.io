@@ -1,0 +1,29 @@
+[
+    {
+        "titleProduct": "Teclado inalámbrico LogiTech K400 Wireless Touch",
+        "descriptionProduct": "Uso agradable y silencioso, Diseño resistente a salpicaduras, Seguimiento óptico de alta definición, Teclas resistentes, Patas ajustables y robustas, Barra espaciadora curvada",
+        "stock": 5,
+        "category": "Teclados",
+        "imageProduct": "https://medias.musimundo.com/medias/00011273-173867-173867-01.png-173867-01.png-size515?context=bWFzdGVyfGltYWdlc3w1MDI5ODB8aW1hZ2UvcG5nfGgyMy9oODMvMTAzNzg0OTQzNzgwMTQvMDAwMTEyNzMtMTczODY3LTE3Mzg2N18wMS5wbmctMTczODY3XzAxLnBuZ19zaXplNTE1fDIzOTA5ODIwZmUxZGZjMjdkZmNlMTA0NmRiYWVjNDllNTYzMTYxYzhmYjYwNTg3M2ViNDBmMDgwYTlmZmIzODk",
+        "idProduct": 1,
+        "price": 5500
+    },
+    {
+        "titleProduct": "Mouse NogaNet Gamer 6D ST-002",
+        "descriptionProduct": "Mouse Gamer de 6 Botones - Botones de Page Up y Page Down - Botón de DPI intercambiable 600/1200/1800/2400 - Rueda de Scroll para hacer zoom y navegar - Tecnología ultrapolling de 1ms de respues ta.",
+        "stock": 7,
+        "category": "Mouses",
+        "imageProduct": "https://s3-sa-east-1.amazonaws.com/saasargentina/js5YAR90pHrt0Vvo5kCB/imagen",
+        "idProduct": 2,
+        "price": 2000
+    },
+    {
+        "titleProduct": "Auriculares Noblex HP107BB",
+        "descriptionProduct": "Ahora podés tener toda la música que te gusta escuchar en los Auriculares HP107BB Negro ya que cuentan con: Micrófono Incorporado. Conector de 3 5mm. Sensibilidad de 110 dB+/-3DB. 2 Drivers de 40mm d e diámetro y es muy buen auricular de tipo dinámico.",
+        "stock": 10,
+        "category": "Auriculares",
+        "imageProduct": "https://d2r9epyceweg5n.cloudfront.net/stores/476/967/products/10118661-fb8d23d224fbaa4d9816162508786728-640-0.png",
+        "idProduct": 3,
+        "price": 4500
+    }
+]
