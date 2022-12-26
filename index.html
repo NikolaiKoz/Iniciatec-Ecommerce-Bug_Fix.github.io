@@ -36,7 +36,7 @@
               alt="Lens icon"
             />
           </figure>
-          <input class="inputSearch" type="text" placeholder="Search" />
+          <input id="searchBar" class="inputSearch" type="text" placeholder="Search" />
         </section>
 
         <figure class="imgContainer alertCartContainer">
@@ -46,6 +46,34 @@
             alt="Cart icon"
           />
           <span class="alertCart hide">0</span>
+
+          <section class="resumeCart">
+
+            <figure class="resumeContainer">
+              <img src="./assets/img/logo/barbie.png" alt="Product Img" class="resumeImg">
+              <figcaption class="resumeText">
+                <h3 class="resumeTitle">Barbie</h3>
+                <p class="resumePrice">$100</p>
+            </figure>
+
+            <figure class="resumeContainer">
+              <img src="./assets/img/logo/barbie.png" alt="Product Img" class="resumeImg">
+              <figcaption class="resumeText">
+                <h3 class="resumeTitle">Barbie</h3>
+                <p class="resumePrice">$100</p>
+            </figure>
+
+            <figure class="resumeContainer">
+              <img src="./assets/img/logo/barbie.png" alt="Product Img" class="resumeImg">
+              <figcaption class="resumeText">
+                <h3 class="resumeTitle">Barbie</h3>
+                <p class="resumePrice">$100</p>
+            </figure>
+
+
+            <button class="buyBtn">BUY</button>
+          </section>
+
         </figure>
       </section>
 
@@ -100,57 +128,28 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <picture class="imgContainerLogo">
-          <img
-            class="imgLogo"
-            src="./assets/img/logo/exampleLogo.jpg"
-            alt="BugFix Logo"
-          />
-        </picture>
+        <picture class="imgContainerLogo">
+            <img
+              class="imgLogo"
+              src="./assets/img/logo/exampleLogo.jpg"
+              alt="BugFix Logo"
+            />
+          </picture>
 
         <section class="authors">
           <h3>Authors</h3>
-          <ul>
-            <li>
-                  <figure class="imgContainerFooter">
-                    <a href="https://www.linkedin.com/in/maxi-gartner/" target="_blank"><i class="fa-brands fa-linkedin imgIcon"></i></a>
-                    <a href="" target="_blank"><i class="fa-brands fa-github imgIcon"></i></a>
-                      <figcaption>Maxi Gartner</figcaption>
-                  </figure>
-            </li>
-
-            <li>
-                  <figure class="imgContainerFooter">
-                    <a href="https://www.linkedin.com/in/camila-herediav/" target="_blank"><i class="fa-brands fa-linkedin imgIcon"></i></a>
-                    <a href="https://github.com/camilaheredia9" target="_blank"><i class="fa-brands fa-github imgIcon"></i></a>
-                      <figcaption>Camila Heredia</figcaption>
-                  </figure>
-            </li>
-
-            <li>
-                  <figure class="imgContainerFooter">
-                    <a href="https://www.linkedin.com/in/mar%C3%ADa-del-roc%C3%ADo-morales-72389011b/" target="_blank"><i class="fa-brands fa-linkedin imgIcon"></i></a>
-                    <a href="https://github.com/Rochius" target="_blank"><i class="fa-brands fa-github imgIcon"></i></a>
-                      <figcaption>Rocio Morales</figcaption>
-                  </figure>
-            </li>
-
-            <li>
-                  <figure class="imgContainerFooter">
-                    <a href="https://www.linkedin.com/in/vallejosjoseluis/" target="_blank"><i class="fa-brands fa-linkedin imgIcon"></i></a>
-                    <a href="https://github.com/NikolaiKoz" target="_blank"><i class="fa-brands fa-github imgIcon"></i></a>
-                      <figcaption>Jose Luis Vallejos</figcaption>
-                  </figure>
-            </li>
-
-            </ul>
+          <ul id="list-authors">
+          </ul>
           </section>
     </footer>
     <script src="https://kit.fontawesome.com/7363efb40e.js" crossorigin="anonymous"></script>
     <script src="/js/banner.js"></script>
+    <script src="./js/renderFooter.js"></script>
+    <script src="./js/searchBar.js"></script>
     <script src="/js/renderCards.js"></script>
     <script src="./js/addToCartBtn.js"></script>
     <script src="./js/alertCart.js"></script>
+    <script src="./js/resumeCart.js"></script>
     <script src="./js/menuCategoriesBtn.js"></script>
   </body>
 </html>
