@@ -42,6 +42,7 @@ const getData = async () => {
     paintDOM(getData);
     addEventCartBtn();
     searchProducts();
+    renderCategories(obtainCategories(getData))
   } catch (error) {
     console.log(error);
   }

@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/resetDOM.css" />
     <link rel="stylesheet" href="./css/generalStyles.css">
+    <link rel="stylesheet" href="./css/categories.css">
     <link rel="stylesheet" href="./css/colorsLight.css">
     <link rel="stylesheet" href="./css/banner.css">
     <link rel="stylesheet" href="./css/card.css">
@@ -65,10 +66,13 @@
           />
           <img
             class="imgIcon"
+            id="menu_icon"
             src="./assets/img/icons/menu.png"
             alt="Menu icon"
           />
         </figure>
+        <ul class="category_container hidden">
+        </ul>
       </section>
     </header>
 
@@ -76,41 +80,11 @@
     <!-- MAIN -->
     <main class="main">
         <article class="bannerCarousel">
-          <div class="carousel_box">
-            <figure class="carouselImgContainer">
-              <img
-                class="carouselImgContainer__img"
-                src="./assets/img/banners/117-mob.png"
-                alt="Banners off"
-              />
-            </figure>
-            <figure class="carouselImgContainer">
-              <img
-                class="carouselImgContainer__img"
-                src="./assets/img/banners/126-mob.png"
-                alt="Banners off"
-              />
-            </figure>
-            <figure class="carouselImgContainer">
-              <img
-                class="carouselImgContainer__img"
-                src="./assets/img/banners/135-mob.png"
-                alt="Banners off"
-              />
-            </figure>
-            <figure class="carouselImgContainer">
-              <img
-                class="carouselImgContainer__img"
-                src="./assets/img/banners/136-mob.png"
-                alt="Banners off"
-              />
-            </figure>
+          <div class="carousel_box" id="carousel_img_container">
+          <!-- Is rendered in banner.js -->
           </div>
-          <ul class="carousel_dots">
-            <li class="carousel_dot activ"></li>
-            <li class="carousel_dot"></li>
-            <li class="carousel_dot"></li>
-            <li class="carousel_dot"></li>
+          <ul class="carousel_dots" id="dots_container">
+            <!-- Is rendered in banner.js -->
           </ul>
         </article>
 
@@ -147,5 +121,6 @@
     <script src="/js/renderCards.js"></script>
     <script src="./js/addToCartBtn.js"></script>
     <script src="./js/alertCart.js"></script>
+    <script src="./js/menuCategoriesBtn.js"></script>
   </body>
 </html>
