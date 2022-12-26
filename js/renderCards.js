@@ -37,6 +37,7 @@ const getData = async () => {
     const getData = await getFetch.json();
     paintDOM(getData);
     addEventCartBtn();
+    renderCategories(obtainCategories(getData))
   } catch (error) {
     console.log(error);
   }
