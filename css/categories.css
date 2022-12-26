@@ -4,6 +4,7 @@
 
 .category_container{
     background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -18,8 +19,15 @@
 }
 
 .category_item:hover{
-    text-decoration: underline;
+    text-shadow: 0 0 10px var(--Purple),
+    0 0 20px var(--Purple),
+    0 0 40px var(--Purple),
+    0 0 80px var(--Purple),
+    0 0 160px var(--Purple);
+    transform-style: ;
+    font-weight: 600;
     cursor: pointer;
+    transition: 2000ms;
 }
 
 .hidden{
