@@ -1,0 +1,105 @@
+*{
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+}
+.cart{
+    background-color: white;
+    opacity: 90%;
+    padding: 3rem;
+    border-radius: 0.5em;
+    margin: 2%;
+}
+
+.cartNumber{
+    width: 8em;
+    height: 40px;
+    /* background-color: red; */
+    border-radius: 0.175rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #0d6dfd;
+}
+.cartNumber p{
+    color: #0d6dfd;
+    font-size: 18px;
+    font-weight: bold;
+}
+.separator{
+        background: rgba(0, 0, 0, 0.479);
+        height: 1px;
+        margin: 0;
+        width: 100%;
+}
+.item img{
+    width: 100px;
+}
+.item{
+    display: grid;
+    height: 250px;
+    grid-template-columns: repeat(7, 1fr);
+    /* background-color: rgb(240, 136, 0); */
+    column-gap: 2px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    justify-content: center;
+}
+.imgDiv{
+    grid-column: 1/2;
+}
+.dataItem{
+    grid-column: 2/5;
+    /* background-color: yellowgreen; */
+    padding: 3%;
+    position: relative;
+}
+.descriptionItem{
+    font-size: 20px;
+}
+.buttomsItem{
+    position: absolute;
+    bottom: 0;
+}
+.counterItem{
+    grid-column: 5/7;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    /* background-color: rgb(42, 151, 165); */
+    height: 80px;
+}
+
+.addItem,
+.counterItem p,
+.subtractItem{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    margin: 2px;
+    margin-top: 10px;
+}
+
+.allValue{
+    grid-column: 7/8;
+}
+.stock{
+    position: absolute;
+    bottom: 0;
+}
+.fullShipment{
+    display: flex;
+    justify-content: end;
+    padding: 5%;
+}
+.fullShipmentPrice{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.purchase{
+    display: flex;
+    justify-content: end;
+    padding: 5%;
+    padding-bottom: 0;
+}
