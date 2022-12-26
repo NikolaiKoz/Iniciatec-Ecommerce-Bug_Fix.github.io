@@ -5,6 +5,10 @@ const paintDOM = (data) => {
   data.forEach(product => {
     const cardArticle = document.createElement("article")
     cardArticle.classList.add("card__Container")
+    
+    const idCard = deleteDiacritics(product.titleProduct);
+    cardArticle.id = idCard.toLowerCase().replaceAll(" ", "-");
+
     cardArticle.innerHTML = `
     <section class="glass">
       <figure class="header__card">
@@ -37,9 +41,18 @@ const getData = async () => {
     const getData = await getFetch.json();
     paintDOM(getData);
     addEventCartBtn();
+    searchProducts();
   } catch (error) {
     console.log(error);
   }
 };
 
 getData();
+
+
+// función que elimina los acentos y diéresis
+const deleteDiacritics = (text) => {
+  return text.toLowerCase().normalize('NFD')
+   .replace(/([aeio])\u0301|(u)[\u0301\u0308]/gi,"$1$2")
+   .normalize();
+}
