@@ -16,6 +16,8 @@ const paintDOM = (data) => {
       </figcaption>
     </section>
     <footer class="footer__card">
+      <p class="product__stock delete">${product.stock}</p>
+      <p class="product__id delete">${product.idProduct}</p>
       <p class="product__description">${product.descriptionProduct}</p>
       <div class="container__PriceAndBtn">
         <h2 class="product__price">$${product.price}</h2>
@@ -30,12 +32,11 @@ const paintDOM = (data) => {
 };
 
 const getData = async () => {
-  console.log("hello");
   try {
     const getFetch = await fetch("products.json");
     const getData = await getFetch.json();
     paintDOM(getData);
-    addEventCartBtn()
+    addEventCartBtn();
   } catch (error) {
     console.log(error);
   }
