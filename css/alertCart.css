@@ -21,8 +21,8 @@
 
 .resumeCart{
     position: absolute;
-    top: 40px;
-    right: 20px;
+    top: 45px;
+    right: 25px;
     width: 300px;
     background-color: #fff;
     color: black;
@@ -43,6 +43,10 @@
 .resumeImg{
     height: 100%;
     width: 100px;
+}
+
+.resumePrice{
+    text-align: end;
 }
 
 .buyBtn{
