@@ -48,3 +48,137 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+<<<<<<< HEAD
+=======
+
+/* TEST */
+
+
+.delete{
+    display: none;
+}
+
+body{
+    background-color: var(--BgLigthTeme);
+}
+
+.header{
+    background-color: var(--LightGreen);
+    width: 100%;
+    height: 100px;
+    padding: 0 1em;
+}
+
+.logoAndSearchContainer{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputSearchContainer{
+    display: flex;
+    width: 100%;
+    padding: 0 1em;
+    position: relative;
+}
+
+.imgContainerLogo{
+    height: 100%;
+    max-width: 100px;
+}
+
+.imgContainer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.lens{
+    position: absolute;
+    z-index: 1;
+}
+
+.imgIcon{
+ height: 16px;
+}
+
+.imgLogo{
+    width: 100%;
+
+}
+
+.inputSearch{
+    background-color: #f6fbf2;
+    opacity: 90%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.userData{
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.userInfoContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+}
+
+.userInfoContainer > img{
+    margin-left: 5px;
+}
+
+.userInfo{
+    font-size: .668rem;
+}
+
+.margin{
+    margin-right: 10px;
+}
+
+/* MAIN */
+
+.main{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bannerCarousel,
+.carouselImgContainer{
+    height: 200px;
+}
+
+.carouselImgContainer__img{
+    height: 100%;
+    width: 100%;
+}
+
+/* FOOTER */
+
+.footer{
+    background-color: var(--LightGreen);
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imgContainerFooter{
+    display: flex;
+    height: 16px;
+}
+
+.hiden{
+    display: none;
+}
+>>>>>>> 86eadb15b226a1b4842f13eccbe4099f550e612f
