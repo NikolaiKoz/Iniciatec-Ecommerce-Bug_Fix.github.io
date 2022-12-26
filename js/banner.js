@@ -36,6 +36,51 @@ const bannerImagesMobile = [
 ]
 
 
+const renderBanner = (images)=>{
+    const carouselImagesContainer = document.getElementById("carousel_img_container")
+    const dotsCotainer = document.getElementById("dots_container")
+    const fragmentImg = document.createDocumentFragment()
+    const fragmentDots = document.createDocumentFragment()
+
+    images.forEach((image, i)=>{
+        const imageContainer = document.createElement("figure")
+        const dot = document.createElement("li")
+        imageContainer.classList.add("carouselImgContainer")
+        imageContainer.innerHTML = `
+            <img
+            class="carouselImgContainer__img"
+            src=${image.imgUrl}
+            alt="Banners off"
+            />
+        `
+        fragmentImg.appendChild(imageContainer)
+        if (i===0){
+            dot.classList.add("carousel_dot","activ")
+        }else{
+            dot.classList.add("carousel_dot")
+        }
+        fragmentDots.appendChild(dot)
+    })
+    carouselImagesContainer.appendChild(fragmentImg)
+    dotsCotainer.appendChild(fragmentDots)
+}
+
+const resizeBanner = ()=>{
+    const images = document.querySelectorAll(".carouselImgContainer__img")
+    console.log(images)
+    if (screen.width<768){
+        images.forEach((image,i) => {
+            image.src = bannerImagesMobile[i].imgUrl
+        });
+    }
+    else{
+        images.forEach((image,i) => {
+            image.src = bannerImages[i].imgUrl
+        });
+    }
+}
+
+
 let count = 1
 
 const addEventCarouselDots = ()=>{
@@ -44,21 +89,24 @@ const addEventCarouselDots = ()=>{
 
     carouselDots.forEach( ( dot , i )=> {
         carouselDots[i].addEventListener('click',()=>{
+
             count = i+1
             let position  = i
-            let move = position * - (100/4)
+            let move = position * - (100/5)
 
             carouselBox.style.transform = `translateX(${ move }%)`
 
-            carouselDots.forEach( ( dot , i )=>{
-                carouselDots[i].classList.remove('activ')
+            carouselDots.forEach( ( dot , j )=>{
+                carouselDots[j].classList.remove('activ')
             })
             carouselDots[i].classList.add('activ')
+            if(i === carouselDots.length-1){
+                count = 0
+            }
 
         })
     })
 }
-
 
 const carouselTransition = ()=>{
     const carouselBox = document.querySelector('.carousel_box')
@@ -67,7 +115,7 @@ const carouselTransition = ()=>{
     const interval = 3000;
 
     setInterval(function(){
-        let move = count * - (100/4)
+        let move = count * - (100/5)
         carouselBox.style.transform = `translateX(${ move }%)`
         count++
         if(count == carouselItem.length){
@@ -79,7 +127,7 @@ const carouselTransition = ()=>{
                     carouselDots[i].classList.remove('activ')
                 })
                 carouselDots[count - 1].classList.add('activ')
-            },1500)
+            },3000)
         }
         carouselDots.forEach( ( dot , i )=>{
             carouselDots[i].classList.remove('activ')
@@ -88,5 +136,11 @@ const carouselTransition = ()=>{
     }, interval)
 }
 
+if (screen.width<768)
+    renderBanner(bannerImagesMobile)
+else
+    renderBanner(bannerImages)
+
 carouselTransition()
 addEventCarouselDots()
+window.addEventListener('resize', resizeBanner)

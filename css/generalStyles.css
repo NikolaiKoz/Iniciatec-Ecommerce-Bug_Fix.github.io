@@ -77,6 +77,8 @@ body{
     height: 50%;
     display: flex;
     float: right;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .userInfoContainer{
