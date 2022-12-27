@@ -1,13 +1,12 @@
-*{
-    color: black;
-    font-family: 'Roboto Mono', monospace;
-}
+
 .cart{
     background-color: white;
     opacity: 90%;
     padding: 3rem;
     border-radius: 0.5em;
     margin: 2%;
+    color: black;
+
 }
 
 .cartNumber{
