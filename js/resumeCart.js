@@ -1,38 +1,58 @@
+// renderizar productos en el carrito
 const resumeCart = () => {
 
-    const resumeCartBtn = document.querySelector('.alertCartContainer');
+    const resumeCartBtn = document.querySelector('.container-iconCart');
+    const containerResumeCart = document.querySelector(".resumeContainer");
 
     resumeCartBtn.addEventListener('click', () => {
 
-        const resumeCartContainer = document.querySelector('.resumeCart');
-        console.log(resumeCartContainer);
-        const fragment = document.createDocumentFragment();
-
+        containerResumeCart.innerHTML = "";
+        
         const localStorageData = JSON.parse(localStorage.getItem('Products in Cart'));
-        console.log(localStorageData);
 
         localStorageData.forEach(product => {
+            const productCart = document.createElement("div");
+            productCart.classList.add("productCart");
 
-            let productCart = `
-            <figure class="resumeContainer">
-              <img src="${product.image}" alt="${product.title}" class="resumeImg">
-              <figcaption class="resumeText">
+            productCart.innerHTML = `
+            <img src="${product.image}" alt="${product.title}" class="resumeImg">
+            <div class="container-productData">
+              <div class="container-productData_up">
                 <h3 class="resumeTitle">${product.title}</h3>
-                <p class="resumePrice">(${product.quantity}) - $${product.totalToPay}</p>
-            </figure>
-            `;
+                <p class="resumePrice">$${product.totalToPay}</p>
+              </div>
 
-            fragment.appendChild(productCart);
-            console.log(fragment);
-        });
+              <div class="container-productData_down">
+                <div class="quantity-box">
+                  <button class="quantity-btn less" type="button">-</button>
+                  <span class="quantity">${product.quantity}</span>
+                  <button class="quantity-btn more" type="button">+</button>
+                </div>
+                <img id="${product.title.toLowerCase().replaceAll(" ","-")}-btn" class="deleteProduct-btn" src="./assets/img/icons/delete.png" alt="delete icon">
+                
+               </div>
+            </div>
+            `
+            containerResumeCart.appendChild(productCart);
+        })
 
+        const footerCart = document.querySelector(".container-footerCart");
 
-
-
-    });
-
-
-
-
-};
+        footerCart.innerHTML = `
+            <p class="totalToPay">Total: $${localStorage.getItem("Total in Cart")}</p>
+            <button class="goToCart-btn">Go to my cart</button>
+        `
+    })
+}
 resumeCart();
+
+// mostrar / ocultar carrito de compras
+const resumeCartContainer = document.getElementById('resumeCart');
+        
+function showResumeCart() {
+    resumeCartContainer.classList.remove("delete");
+}
+
+function hideResumeCart() {
+    resumeCartContainer.classList.add("delete");
+}
