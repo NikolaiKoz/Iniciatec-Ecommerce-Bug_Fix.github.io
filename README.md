@@ -54,8 +54,8 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 ## About the project
 
 <div>
-    <img src="./assets/img/imgDocs/imgDesktop1.png">
-    <img src="./assets/img/imgDocs/imgMobile1.png">
+    <img src="./assets/img/docs/imgDEsktop1.png">
+    <img src="./assets/img/docs/imgMobile1.png">
 </div>
 
 ### Home
