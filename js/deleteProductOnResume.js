@@ -70,6 +70,8 @@ const deleteProductOnResume = () => {
              * @description: Delete product from DOM.
              */
             btn.parentElement.parentElement.parentElement.remove();
+            alertCart();
+            noProductsInCart();
         });
 
     });

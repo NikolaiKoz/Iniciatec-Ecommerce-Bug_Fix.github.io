@@ -10,6 +10,8 @@ const resumeCart = () => {
 
         const localStorageData = JSON.parse(localStorage.getItem('Products in Cart'));
 
+        noProductsInCart();
+
         localStorageData.forEach(product => {
             const productCart = document.createElement("div");
             productCart.classList.add("productCart");
