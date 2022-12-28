@@ -40,7 +40,7 @@ const resumeCart = () => {
 
         footerCart.innerHTML = `
             <p class="totalToPay">Total: $${localStorage.getItem("Total in Cart")}</p>
-            <button class="goToCart-btn">Go to my cart</button>
+            <a href="./html/shoppingCart.html" class="goToCart-btn">Go to my cart</a>
         `
     })
 }

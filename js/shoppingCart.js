@@ -1,6 +1,4 @@
-console.log("js cart");
 const data = JSON.parse(localStorage.getItem('Products in Cart'));
-console.log(data);
 
 const cart = document.getElementById("cart");
 //console.log(cart);
@@ -67,7 +65,7 @@ deleteCartItems.forEach((cartBtn)=>{
         localStorage.setItem('Products in Cart', JSON.stringify(data))
         cart.textContent = ''
         location. reload()
-        addCart(data);  
+        addCart(data);
     })
 })
 }
@@ -76,12 +74,10 @@ deleteButtoms(data)
 const lessButtom = data => {
     const lessButtomCartItems = document.querySelectorAll(".subtractItem");
     //console.log("lessButtomCartItems", lessButtomCartItems)
-    
+
     // botones de eliminar
     lessButtomCartItems.forEach((cartBtn)=>{
         cartBtn.addEventListener('click', ()=>{
-            console.log(cartBtn.id)
-            console.log(data)
                 data.forEach(item => {
                 if(item.quantity > 0){
                     if(item.id === cartBtn.id){
@@ -101,10 +97,10 @@ const lessButtom = data => {
                     localStorage.setItem('Products in Cart', JSON.stringify(data))
                     cart.textContent = ''
                     location. reload()
-                    addCart(data);  
+                    addCart(data);
             }
                 })
-            
+
         })
     })
     }
@@ -114,7 +110,7 @@ const lessButtom = data => {
     const addButtom = data => {
         const addButtomCartItems = document.querySelectorAll(".addItem");
         //console.log("addButtomCartItems", addButtomCartItems)
-        
+
         addButtomCartItems.forEach((cartBtn)=>{
             cartBtn.addEventListener('click', ()=>{
                 console.log(cartBtn.id)
@@ -131,9 +127,8 @@ const lessButtom = data => {
                         localStorage.setItem('Products in Cart', JSON.stringify(data))
                         cart.textContent = ''
                         location. reload()
-                        addCart(data); 
+                        addCart(data);
                 })
-                
                 /* localStorage.removeItem("Products in Cart");
                 localStorage.setItem('Products in Cart', JSON.stringify(data))
                 location. reload() */
@@ -145,7 +140,6 @@ const lessButtom = data => {
         //botones de comprar
         const purchaseButtom = (data) => {
             const purchaseBTN = document.getElementById("buttomPurchase")
-            console.log(purchaseBTN)
 
             purchaseBTN.addEventListener('click', ()=>{
                 Swal.fire({
@@ -164,6 +158,8 @@ const lessButtom = data => {
                         )
                         setTimeout(function(){
                             localStorage.removeItem("Products in Cart");
+                            localStorage.removeItem("Total in Cart");
+
                             location.href ="../index.html";
                         }, 1000);
                         }
