@@ -44,7 +44,21 @@ const deleteProductOnResume = () => {
              * @example: 150
              * @note: The total to pay is the sum of the total to pay of each product.
              */
-            document.querySelector(".totalToPay").textContent = `Total: $${newProductsInCart.reduce((acc, product) => acc + product.totalToPay, 0)}`;
+            totalInCart = newProductsInCart.reduce((acc, product) => acc + product.totalToPay, 0);
+
+            /**
+             * @description: Total to pay in DOM.
+             * @type {HTMLElement}
+             */
+            document.querySelector(".totalToPay").textContent = `Total: $${totalInCart}`;
+
+            /**
+             * @description: Total in cart.
+             * @type {string}
+             * @example: "150"
+             * @note: The total in cart is saved in localStorage as a string.
+             */
+            localStorage.setItem("Total in Cart", JSON.stringify(totalInCart));
 
             /**
              * @description: New products in cart.
