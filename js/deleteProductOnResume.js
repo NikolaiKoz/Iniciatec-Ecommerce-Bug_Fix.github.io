@@ -71,6 +71,7 @@ const deleteProductOnResume = () => {
              */
             btn.parentElement.parentElement.parentElement.remove();
             alertCart();
+            noProductsInCart();
         });
 
     });

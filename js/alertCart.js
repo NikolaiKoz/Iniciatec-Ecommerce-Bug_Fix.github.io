@@ -1,6 +1,6 @@
 /**
  * @fileoverview This file contains the function that alerts the user of the number of products in the cart.
- *
+ * @author: Jose Luis Vallejos
  */
 const alertCart = () => {
 
