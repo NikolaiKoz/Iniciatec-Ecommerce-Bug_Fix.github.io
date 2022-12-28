@@ -13,13 +13,15 @@
     <link rel="stylesheet" href="./css/card.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/alertCart.css">
+
     <title>Index</title>
   </head>
   <body>
     <!-- HEADER -->
-    <h1 class="neonText">BUG FIX</h1>
+    <h1 class="neonText delete">BUG FIX</h1>
     <header class="header">
       <section class="logoAndSearchContainer">
+        <!-- logo -->
         <picture class="imgContainerLogo">
           <a href="./index.html">
             <img
@@ -30,6 +32,7 @@
           </a>
         </picture>
 
+        <!-- buscador -->
         <section class="inputSearchContainer">
           <figure class="imgContainer lens">
             <img
@@ -41,42 +44,23 @@
           <input id="searchBar" class="inputSearch" type="text" placeholder="Search" />
         </section>
 
-        <figure class="imgContainer alertCartContainer">
-          <img
-            class="imgIcon"
-            src="./assets/img/icons/cart.png"
-            alt="Cart icon"
-          />
-          <span class="alertCart hide">0</span>
-
-          <section class="hide resumeCart">
-
-            <figure class="resumeContainer">
-              <img src="./assets/img/logo/barbie.png" alt="Product Img" class="resumeImg">
-              <figcaption class="resumeText">
-                <h3 class="resumeTitle">Barbie</h3>
-                <p class="resumePrice">$100</p>
-            </figure>
-
-            <figure class="resumeContainer">
-              <img src="./assets/img/logo/barbie.png" alt="Product Img" class="resumeImg">
-              <figcaption class="resumeText">
-                <h3 class="resumeTitle">Barbie</h3>
-                <p class="resumePrice">$100</p>
-            </figure>
-
-            <figure class="resumeContainer">
-              <img src="./assets/img/logo/barbie.png" alt="Product Img" class="resumeImg">
-              <figcaption class="resumeText">
-                <h3 class="resumeTitle">Barbie</h3>
-                <p class="resumePrice">$100</p>
-            </figure>
-
-
-            <button class="buyBtn">BUY</button>
-          </section>
-
+        <!-- carrito -->
+        <figure class="imgContainer container-iconCart">
+          <img class="imgIcon" src="./assets/img/icons/cart.png" alt="Cart icon" onclick="showResumeCart()">
+          <span class="alertCart">0</span>
         </figure>
+
+        <!-- resumen de carrito -->
+        <section id="resumeCart" class="resumeCart delete">
+          <div class="container-headerCart">
+            <h2>My cart</h2>
+            <img src="./assets/img/icons/close.png" alt="close icon" onclick="hideResumeCart()">
+          </div>
+
+          <div class="resumeContainer"></div>
+
+          <div class="container-footerCart"></div>
+        </section>
       </section>
 
       <section class="userData">
@@ -143,12 +127,15 @@
             />
           </picture>
 
+
         <section class="authors">
           <h3>Authors</h3>
           <ul id="list-authors">
           </ul>
+
           </section>
     </footer>
+
     <script src="https://kit.fontawesome.com/7363efb40e.js" crossorigin="anonymous"></script>
     <script src="/js/banner.js"></script>
     <script src="./js/renderFooter.js"></script>

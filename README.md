@@ -10,7 +10,7 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 
 ## Authors
 
-|<img src="https://avatars.githubusercontent.com/u/113448691?v=4" width=200>|<img src="https://avatars.githubusercontent.com/u/98178495?v=4" width=200>|<img src="https://avatars.githubusercontent.com/u/98178495?v=4" width=200>|<img src="https://avatars.githubusercontent.com/u/98178495?v=4" width=200>|
+|<img src="https://avatars.githubusercontent.com/u/113448691?v=4" width=200>|<img src="https://avatars.githubusercontent.com/u/107807752?v=4" width=200>|<img src="https://avatars.githubusercontent.com/u/99517293?v=4" width=200>|<img src="https://avatars.githubusercontent.com/u/98178495?v=4" width=200>|
 |:-:|:-:|:-:|:-:|
 |Gartner, Maximiliano|Heredia Valverde, Camila Solange|Morales, Maria del Rocío|Vallejos, Jose Luis|
 |Frontend Developer|Frontend Developer|Frontend Developer|Scrum Master|
@@ -34,27 +34,60 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 
 ## Libraries
 
-- [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/)
-- [Slick](https://kenwheeler.github.io/slick/)
-- [AOS](https://michalsnik.github.io/aos/)
-- [Animate CSS](https://animate.style/)
-- [SlickNav](https://slicknav.com/)
-- [Slick Slider](https://kenwheeler.github.io/slick/)
+- [JSDoc](https://jsdoc.app/)
 
 ## Frameworks
 
 - [Bootstrap](https://getbootstrap.com/)
-- [jQuery](https://jquery.com/)
-- [Font Awesome](https://fontawesome.com/)
 - [Google Fonts](https://fonts.google.com/)
-- [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/)
-- [Slick](https://kenwheeler.github.io/slick/)
-
+#
 ## How to use
 
-1. Clone the repository
-2. Open the index.html file in your browser
+1. Copy the repository link
+2. Open the terminal and type `git clone` and paste the link
+3. Open the project in your code editor
+4. Verify that you have the extensions installed (Live Server)
+5. Open the project with Live Server
 
+#
 
+## About the project
 
+<div>
+    <img src="./assets/img/imgDocs/imgDesktop1.png">
+    <img src="./assets/img/imgDocs/imgMobile1.png">
+</div>
 
+### Home
+
+* On the main page we find the products rendered in rendercards.js, in said file we find an asynchronous function that makes the request to a backend, from here we obtain the data of the products.
+
+* The shearch bar is a filter that allows us to search for a product by name.
+
+* The filter by category is a filter that allows us to filter the products by category.
+
+ * The cards show an image, description, price and category, but also have hidden elements with a display none with the class name "delete", which are the product id and the stock. these elements are then used to manipulate the local Storage
+
+ * The footer is rendered in the renderFooter.js file, in this file we find a function that makes the request to the authors.json file, from here we obtain the data of the authors and render it in the footer.
+
+ * All the elements of the page are responsive, the page is adapted to mobile devices.
+
+ ### Add to cart Button
+
+- The add to cart button is a function that is called when the user clicks on the add to cart button, this function takes the data of the product and adds it to the local storage.
+
+### Icon Cart
+
+ - The icon cart is a function that is called when the user clicks on the icon cart, this function takes the data of the local storage.
+    Shows an alert of the number of products in the cart.
+    When the user clicks on the cart, a summary of the added products is rendered, showing the image, the title and the price for the number of products of the same type. SEGUIR ASKDJASOIFHOIASHFOAS"FHUASOIFHGOASFASODASOFGADSG
+
+### Cart resume
+
+- The cart resume is a function that is called when the user clicks on the icon cart, this function takes the data of the local storage.
+    When the user clicks on the cart, a summary of the added products is rendered, showing the image, the title and the price for the number of products of the same type.
+    From here you can modify the quantities of the products.
+
+### Cart resume button
+
+ - This button redirects the user to the purchase page.

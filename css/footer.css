@@ -1,6 +1,6 @@
 /* TODOS LOS COLORES SON PROVISORIOS */
 .footer{
-    overflow-x: hidden;
+    margin-top: 3em;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
