@@ -50,11 +50,13 @@
     border-bottom: 1px solid #000;
 }
 .resumeContainer{
+    height: 65vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 10px;
+    overflow-y: scroll;
 }
 .container-productData{
     width: 65%;

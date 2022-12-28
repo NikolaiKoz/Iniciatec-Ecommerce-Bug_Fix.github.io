@@ -4,7 +4,7 @@ BugFix is an e-commerce project for the Inciatec - Accenture bootcamp. The team 
 
 In this project we had to use HTML, CSS and vanilla JavaScript, but our educators gave us freedom to use any framework or library we wanted.
 
-    The projects are carried out with hundreds of tools, languages and hours of work, but the most important thing for us is the passion for web development.
+- The projects are carried out with hundreds of tools, languages and hours of work, but the most important thing for us is the passion for web development.
 
 #
 
@@ -54,8 +54,8 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 ## About the project
 
 <div>
-    <img src="./assets/img/imgDocs/imgDesktop1.png">
-    <img src="./assets/img/imgDocs/imgMobile1.png">
+    <img src="./assets/img/docs/imgDEsktop1.png">
+    <img src="./assets/img/docs/imgMobile1.png">
 </div>
 
 ### Home

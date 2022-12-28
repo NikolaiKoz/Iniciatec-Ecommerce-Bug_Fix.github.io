@@ -28,7 +28,7 @@ const noProductsInCart = () => {
      */
     if (localStorageData.length === 0) {
         containerResumeCart.innerHTML = `
-        <img src="./assets/img/alerts/169899708,width=178,height=178.webp" alt="empty cart icon" class="emptyCartImg">
+        <img style="width: 60%;" src="./assets/img/alerts/WhatsApp Image 2022-12-28 at 13.48.57.jpeg" alt="empty cart icon" class="emptyCartImg">
         <p>Your cart is empty</p>
         <p>Come back to buy</p>
         `
