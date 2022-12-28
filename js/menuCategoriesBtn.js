@@ -5,7 +5,7 @@ const obtainCategories = (data)=>{
     const listCategories = productCategories.reduce((array, categorie) => {
         if(!array.find(cat => cat == categorie))
             array.push(categorie)
-        
+
         return array
     },[]);
 
@@ -13,6 +13,9 @@ const obtainCategories = (data)=>{
 }
 
 const renderCategories = (categories)=>{
+    const containerMenu = document.querySelector(".menu_container")
+    if(screen.width>768)
+        containerMenu.classList.remove("hidden")
     const containerCategories = document.getElementsByClassName('category_container')[0]
     categories.forEach(categorie => {
         containerCategories.innerHTML += `
@@ -21,17 +24,24 @@ const renderCategories = (categories)=>{
     });
 }
 
-const showCategories = ()=>{
+const showMenu = ()=>{
     const menuBtn = document.getElementById('menu_icon')
-    const categoriesContainer = document.getElementsByClassName('category_container')[0]
+    const categoriesContainer = document.getElementsByClassName('menu_container')[0]
     menuBtn.addEventListener('click', ()=>{
         if(categoriesContainer.classList.contains('hidden'))
             categoriesContainer.classList.remove('hidden')
-        else    
+        else
             categoriesContainer.classList.add('hidden')
-    })        
-}    
+    })
+}
 
+const resizeMenu = ()=>{
+    window.addEventListener('resize', ()=>{
+        const containerMenu = document.querySelector(".menu_container")
+        if(screen.width>768)
+        containerMenu.classList.remove("hidden")
+    })
+}
 
-
-showCategories()
+showMenu()
+resizeMenu()

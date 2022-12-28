@@ -1,14 +1,21 @@
 // cantidad total de productos agregados al carrito
 let productsInCart = 0;
-// monto total a pagar
-let totalInCart = 0;
-
 
 const addEventCartBtn = ()=>{
     const addToCartBtn = document.querySelectorAll(".btn__card")
 
     // creo array de productos vacío
-    let allProducts = [];
+    let allProducts;
+    // monto total a pagar
+    let totalInCart;
+
+    if( localStorage.getItem('Products in Cart') == null) {
+        allProducts = [];
+        totalInCart = 0;
+    } else {
+        allProducts = JSON.parse(localStorage.getItem("Products in Cart"));
+        totalInCart = Number(localStorage.getItem("Total in Cart"));
+    }
 
     // recorro todos los botones "agregar al carrito"
     addToCartBtn.forEach((cartBtn)=>{
@@ -51,7 +58,7 @@ const addEventCartBtn = ()=>{
                         return product; // si no es, retorno el producto sin modificaciones
                     }
                 })
-                setProductsInLocalStorage(allProducts);
+                setProductsInLocalStorage(allProducts, totalInCart);
             } else {
                 // si no existe, modifico stock y utilizo el spread operator para agregar el nuevo producto al final del array
                 productInfo.stock--;
@@ -60,7 +67,7 @@ const addEventCartBtn = ()=>{
 
                 allProducts = [...allProducts, productInfo];
 
-                setProductsInLocalStorage(allProducts);
+                setProductsInLocalStorage(allProducts, totalInCart);
             }
 
         alertCart();
@@ -77,6 +84,7 @@ const addEventCartBtn = ()=>{
 //************** LOCAL STORAGE ******************
 //***********************************************
 
-const setProductsInLocalStorage = (allProducts) => {
+const setProductsInLocalStorage = (allProducts, totalInCart) => {
     localStorage.setItem("Products in Cart", JSON.stringify(allProducts));
+    localStorage.setItem("Total in Cart", totalInCart);
 }

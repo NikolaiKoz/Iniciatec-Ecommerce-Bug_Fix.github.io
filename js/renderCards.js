@@ -1,11 +1,14 @@
-
+/**
+ *
+ * @param {Array} data Array of objects that contains the information of each product
+ */
 const paintDOM = (data) => {
   const containerCards = document.getElementById("products__Container");
   const fragment = document.createDocumentFragment()
   data.forEach(product => {
     const cardArticle = document.createElement("article")
     cardArticle.classList.add("card__Container")
-    
+
     const idCard = deleteDiacritics(product.titleProduct);
     cardArticle.id = idCard.toLowerCase().replaceAll(" ", "-");
 
@@ -43,6 +46,7 @@ const getData = async () => {
     addEventCartBtn();
     searchProducts();
     renderCategories(obtainCategories(getData))
+    addEventFilterCategories()
   } catch (error) {
     console.log(error);
   }
