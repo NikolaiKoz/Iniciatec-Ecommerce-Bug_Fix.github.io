@@ -4,54 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/colorsLight.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/resetDOM.css" />
+    <link rel="stylesheet" href="./css/generalStyles.css">
+    <link rel="stylesheet" href="./css/categories.css">
+    <link rel="stylesheet" href="./css/colorsLight.css">
     <link rel="stylesheet" href="./css/banner.css">
     <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/alertCart.css">
     <title>Index</title>
   </head>
+  <a href="./docs/index.html">docs</a>
   <body>
     <!-- HEADER -->
-    <h1 class="hiden">BUG FIX</h1>
+    <h1 class="neonText delete">BUG FIX</h1>
     <header class="header">
       <section class="logoAndSearchContainer">
+        <!-- logo -->
         <picture class="imgContainerLogo">
-          <img
+          <a href="./index.html">
+            <img
             class="imgLogo"
-            src="./assets/img/logo/exampleLogo.jpg"
+            src="./assets/img/logo/bug_fix_logo.png"
             alt="BugFix Logo"
           />
+          </a>
         </picture>
 
+        <!-- buscador -->
         <section class="inputSearchContainer">
           <figure class="imgContainer lens">
             <img
-              class="imgIcon"
+              class="imgIconLens"
               src="./assets/img/icons/lens.png"
               alt="Lens icon"
             />
           </figure>
-          <input class="inputSearch" type="text" placeholder="Search" />
+          <input id="searchBar" class="inputSearch" type="text" placeholder="Search" />
         </section>
 
-        <figure class="imgContainer">
-          <img
-            class="imgIcon"
-            src="./assets/img/icons/cart.png"
-            alt="Cart icon"
-          />
+        <!-- carrito -->
+        <figure class="imgContainer container-iconCart">
+          <img class="imgIcon" src="./assets/img/icons/cart.png" alt="Cart icon" onclick="showResumeCart()">
+          <span class="alertCart delete">0</span>
         </figure>
+
+        <!-- resumen de carrito -->
+        <section id="resumeCart" class="resumeCart delete">
+          <div class="container-headerCart">
+            <h2>My cart</h2>
+            <img src="./assets/img/icons/close.png" alt="close icon" onclick="hideResumeCart()">
+          </div>
+
+          <div class="resumeContainer"></div>
+
+          <div class="container-footerCart"></div>
+        </section>
       </section>
 
       <section class="userData">
         <figure class="imgContainer userInfoContainer">
-          <img
+          <figcaption style="display: flex; align-items: center;">
+            <img
             class="imgIcon margin"
-            src="./assets/img/icons/map.png"
+            src="./assets/img/icons/account.png"
             alt="Cart icon"
           />
-          <figcaption>
-            <h2 class="userInfo">Sent to ${USER} <br> ${LOCATION}</h2>
+            <h2 class="userInfo">User name</h2>
           </figcaption>
           <img
             class="imgIcon"
@@ -60,141 +80,70 @@
           />
           <img
             class="imgIcon"
+            id="menu_icon"
             src="./assets/img/icons/menu.png"
             alt="Menu icon"
           />
         </figure>
+        <div class="menu_container hidden">
+          <ul class="category_container">
+          </ul>
+          <a href="./html/contact.html" class="link">Contact</a>
+        </div>
+        <!-- <ul class="category_container hidden">
+        </ul> -->
       </section>
     </header>
+
+   <div class="hr"></div>
     <!-- MAIN -->
     <main class="main">
         <article class="bannerCarousel">
-          <div class="carousel_box">
-            <figure class="carouselImgContainer">
-              <img
-                class="carouselImgContainer__img"
-                src="./assets/img/banners/117-mob.png"
-                alt="Banners off"
-              />
-            </figure>
-            <figure class="carouselImgContainer">
-              <img
-                class="carouselImgContainer__img"
-                src="./assets/img/banners/126-mob.png"
-                alt="Banners off"
-              />
-            </figure>
-            <figure class="carouselImgContainer">
-              <img
-                class="carouselImgContainer__img"
-                src="./assets/img/banners/135-mob.png"
-                alt="Banners off"
-              />
-            </figure>
-            <figure class="carouselImgContainer">
-              <img
-                class="carouselImgContainer__img"
-                src="./assets/img/banners/136-mob.png"
-                alt="Banners off"
-              />
-            </figure>
+          <div class="carousel_box" id="carousel_img_container">
+          <!-- Is rendered in banner.js -->
           </div>
-          <ul class="carousel_dots">
-            <li class="carousel_dot activ"></li>
-            <li class="carousel_dot"></li>
-            <li class="carousel_dot"></li>
-            <li class="carousel_dot"></li>
+          <ul class="carousel_dots" id="dots_container">
+            <!-- Is rendered in banner.js -->
           </ul>
         </article>
 
-        <h2>ESTO ES EL MAIn</h2>
 
-        <article class="cardContainer">
-            <figure class="cardContainer__imgContainer">
-                <img class="productImg" src="./assets/img/banners/Computer-Deals-November-2017.jpg" alt="${PRODUCT NAME}">
-                <figcaption>
-                    <h3>${PRODUCT NAME}</h3>
-                    <p>${PRODUCT PRICE}</p>
-                </figcaption>
-            </figure>
-        </article>
-
-        <article class="cardContainer">
-            <figure class="cardContainer__imgContainer">
-                <img class="productImg" src="./assets/img/banners/diferencia-entre-banner-y-slider.webp" alt="${PRODUCT NAME}">
-                <figcaption>
-                    <h3>${PRODUCT NAME}</h3>
-                    <p>${PRODUCT PRICE}</p>
-                </figcaption>
-            </figure>
-        </article>
-
-        <article class="cardContainer">
-            <figure class="cardContainer__imgContainer">
-                <img class="productImg" src="./assets/img/banners/promotions-min-copy-1024x576.jpg" alt="${PRODUCT NAME}">
-                <figcaption>
-                    <h3>${PRODUCT NAME}</h3>
-                    <p>${PRODUCT PRICE}</p>
-                </figcaption>
-            </figure>
-        </article>
-
-
-
+        <section class="products__Container" id="products__Container">
+          <!-- Is rendered in renderCards.js -->
+        </section>
 
 
     </main>
+
+   <div class="hr"></div>
+
     <!-- FOOTER -->
     <footer class="footer">
         <picture class="imgContainerLogo">
             <img
               class="imgLogo"
-              src="./assets/img/logo/exampleLogo.jpg"
+              src="./assets/img/logo/bug_fix_logo.png"
               alt="BugFix Logo"
             />
           </picture>
 
-          <section class="authors">
-            <h3>Authors</h3>
-            <ul>
-              <li>
-                <a href="">
-                    <figure class="imgContainerFooter">
-                        <img class="imgIcon" src="./assets/img/icons/github.png" alt="Github Icon">
-                        <figcaption>Author 1</figcaption>
-                    </figure>
-                </a>
-              </li>
-
-              <li>
-                <a href="">
-                    <figure class="imgContainerFooter">
-                        <img class="imgIcon" src="./assets/img/icons/github.png" alt="Github Icon">
-                        <figcaption>Author 1</figcaption>
-                    </figure>
-                </a>
-              </li>
-
-              <li>
-                <a href="">
-                    <figure class="imgContainerFooter">
-                        <img class="imgIcon" src="./assets/img/icons/github.png" alt="Github Icon">
-                        <figcaption>Author 1</figcaption>
-                    </figure>
-                </a>
-              </li>
-
-              <li>
-                <a href="">
-                    <figure class="imgContainerFooter">
-                        <img class="imgIcon" src="./assets/img/icons/github.png" alt="Github Icon">
-                        <figcaption>Author 1</figcaption>
-                    </figure>
-                </a>
-              </li>
-
-            </ul>
+        <section class="authors">
+          <h3>Authors</h3>
+          <ul id="list-authors">
+          </ul>
           </section>
     </footer>
+    <script src="https://kit.fontawesome.com/7363efb40e.js" crossorigin="anonymous"></script>
+    <script src="/js/banner.js"></script>
+    <script src="./js/renderFooter.js"></script>
+    <script src="./js/filterCategories.js"></script>
+    <script src="./js/searchBar.js"></script>
+    <script src="/js/renderCards.js"></script>
+    <script src="./js/addToCartBtn.js"></script>
+    <script src="./js/alertCart.js"></script>
+    <script src="./js/resumeCart.js"></script>
+    <script src="./js/menuCategoriesBtn.js"></script>
+    <script src="./js/deleteProductOnResume.js"></script>
+    <script src="./js/noProductsInCart.js"></script>
   </body>
 </html>

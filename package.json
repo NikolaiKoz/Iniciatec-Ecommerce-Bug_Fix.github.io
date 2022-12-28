@@ -1,0 +1,28 @@
+{
+  "name": "iniciatec-ecommerce-bug_fix.github.io",
+  "version": "1.0.0",
+  "description": "BugFix is an e-commerce project for the Inciatec - Accenture bootcamp. The team members chose the theme of a computer store, this page is inspired by e-sports and the gamer theme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "jsdoc -c jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix.github.io/issues"
+  },
+  "homepage": "https://github.com/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix.github.io#readme",
+  "dependencies": {
+    "clean-jsdoc-theme": "^4.2.1",
+    "docdash": "^2.0.0",
+    "jaguarjs-jsdoc": "^1.1.0",
+    "jsdoc": "^4.0.0",
+    "jsdoc3-bootstrap": "^0.15.0"
+  }
+}
