@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * @param {Array} data Array of objects that contains the information of each product
  */
 const paintDOM = (data) => {
@@ -8,7 +8,7 @@ const paintDOM = (data) => {
   data.forEach(product => {
     const cardArticle = document.createElement("article")
     cardArticle.classList.add("card__Container")
-    
+
     const idCard = deleteDiacritics(product.titleProduct);
     cardArticle.id = idCard.toLowerCase().replaceAll(" ", "-");
 

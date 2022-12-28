@@ -27,7 +27,7 @@ const renderBanner = (images) => {
   const dotsCotainer = document.getElementById("dots_container");
   const fragmentImg = document.createDocumentFragment();
   const fragmentDots = document.createDocumentFragment();
-  
+
   for (let i = 0; i < images.length; i++) {
     const imageContainer = document.createElement("figure");
     const dot = document.createElement("li");
@@ -52,7 +52,7 @@ const renderBanner = (images) => {
 };
 
 /**
- * Changes the array of images used in the banner depending on the screen size 
+ * Changes the array of images used in the banner depending on the screen size
  * @param {object} data An object that contains the desktop and mobile images arrays
  */
 const resizeBanner = (data) => {

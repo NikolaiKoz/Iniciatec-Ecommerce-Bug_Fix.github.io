@@ -7,7 +7,7 @@ const resumeCart = () => {
     resumeCartBtn.addEventListener('click', () => {
 
         containerResumeCart.innerHTML = "";
-        
+
         const localStorageData = JSON.parse(localStorage.getItem('Products in Cart'));
 
         localStorageData.forEach(product => {
@@ -24,12 +24,10 @@ const resumeCart = () => {
 
               <div class="container-productData_down">
                 <div class="quantity-box">
-                  <button class="quantity-btn less" type="button">-</button>
                   <span class="quantity">${product.quantity}</span>
-                  <button class="quantity-btn more" type="button">+</button>
                 </div>
-                <img id="${product.title.toLowerCase().replaceAll(" ","-")}-btn" class="deleteProduct-btn" src="./assets/img/icons/delete.png" alt="delete icon">
-                
+                <img class="deleteProduct-btn" src="./assets/img/icons/delete.png" alt="delete icon">
+
                </div>
             </div>
             `
@@ -48,7 +46,7 @@ resumeCart();
 
 // mostrar / ocultar carrito de compras
 const resumeCartContainer = document.getElementById('resumeCart');
-        
+
 function showResumeCart() {
     resumeCartContainer.classList.remove("delete");
 }

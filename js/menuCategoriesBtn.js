@@ -5,7 +5,7 @@ const obtainCategories = (data)=>{
     const listCategories = productCategories.reduce((array, categorie) => {
         if(!array.find(cat => cat == categorie))
             array.push(categorie)
-        
+
         return array
     },[]);
 
@@ -30,10 +30,10 @@ const showMenu = ()=>{
     menuBtn.addEventListener('click', ()=>{
         if(categoriesContainer.classList.contains('hidden'))
             categoriesContainer.classList.remove('hidden')
-        else    
+        else
             categoriesContainer.classList.add('hidden')
-    })        
-}    
+    })
+}
 
 const resizeMenu = ()=>{
     window.addEventListener('resize', ()=>{

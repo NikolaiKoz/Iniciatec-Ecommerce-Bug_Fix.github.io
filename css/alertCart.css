@@ -91,6 +91,7 @@
 .deleteProduct-btn{
     height: 20px;
     vertical-align: middle;
+    cursor: pointer;
 }
 .container-footerCart{
     width: 100%;
