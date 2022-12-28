@@ -1,18 +1,14 @@
 const alertCart = () => {
 
     const cartAlert = document.querySelector('.alertCart');
+    const ProductsInCart = JSON.parse(localStorage.getItem('Products in Cart'));
 
-    if( localStorage.getItem('Products in Cart') !== null ) {
-        cartAlert.classList.remove('hide');
-        let cartAlertText = 0;
-        const productsInCart = JSON.parse(localStorage.getItem('Products in Cart'));
-        productsInCart.forEach(element => {
-            cartAlertText += element.quantity;
-            cartAlert.innerHTML = cartAlertText;
-        });
+    if (ProductsInCart.length === 0) {
+        cartAlert.classList.add('delete');
     } else {
-        cartAlert.classList.add('hide');
+        cartAlert.classList.remove('delete');
+        let totalProductsInCart = ProductsInCart.reduce((acc, product) => acc + product.quantity, 0);
+        cartAlert.textContent = totalProductsInCart;
     }
-
-};
+}
 alertCart();
