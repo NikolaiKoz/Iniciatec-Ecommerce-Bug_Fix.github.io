@@ -1,6 +1,6 @@
 console.log("js cart");
 const data = JSON.parse(localStorage.getItem('Products in Cart'));
-console.log(data);
+//console.log(data);
 
 const cart = document.getElementById("cart");
 //console.log(cart);
@@ -10,9 +10,11 @@ const addCart = data => {
     const template = document.querySelector("#templateCartItem").content;
 
         const fragment = document.createDocumentFragment();
-
+    if(data.length == 0) {
+        cart.appendChild(template);
+    }else{
     data.forEach(item => {
-        console.log(item.category);
+        //console.log(item.category);
         template.querySelector('img').src = item.image;
         template.querySelector('.descriptionItem').textContent = item.title;
         template.querySelector('.price').textContent = "$" +item.price;
@@ -27,7 +29,7 @@ const addCart = data => {
             fragment.appendChild(clone);
     });
     cart.appendChild(fragment);
-    
+}
 }
 addCart(data);    
 
@@ -53,13 +55,13 @@ addDatesCart(data)
 
 const deleteButtoms = data => {
 const deleteCartItems = document.querySelectorAll(".delet");
-console.log("deleteCartItems", deleteCartItems)
+//console.log("deleteCartItems", deleteCartItems)
 
 deleteCartItems.forEach((cartBtn)=>{
     cartBtn.addEventListener('click', ()=>{
-        console.log(cartBtn.id)
+        //console.log(cartBtn.id)
         data = data.filter(element => element.id !== cartBtn.id)
-        console.log(data)
+        //console.log(data)
         localStorage.removeItem("Products in Cart");
         localStorage.setItem('Products in Cart', JSON.stringify(data))
         cart.textContent = ''
@@ -72,7 +74,7 @@ deleteButtoms(data)
 
 const lessButtom = data => {
     const lessButtomCartItems = document.querySelectorAll(".subtractItem");
-    console.log("lessButtomCartItems", lessButtomCartItems)
+    //console.log("lessButtomCartItems", lessButtomCartItems)
     
     lessButtomCartItems.forEach((cartBtn)=>{
         cartBtn.addEventListener('click', ()=>{
@@ -100,7 +102,7 @@ const lessButtom = data => {
 
     const addButtom = data => {
         const addButtomCartItems = document.querySelectorAll(".addItem");
-        console.log("addButtomCartItems", addButtomCartItems)
+        //console.log("addButtomCartItems", addButtomCartItems)
         
         addButtomCartItems.forEach((cartBtn)=>{
             cartBtn.addEventListener('click', ()=>{
@@ -109,7 +111,7 @@ const lessButtom = data => {
                 data.forEach(item => {
                     if(item.id === cartBtn.id){
                         item.quantity = item.quantity+1
-                        console.log(item.quantity)
+                        //console.log(item.quantity)
                     }
                     console.log(data)
                     localStorage.removeItem("Products in Cart");
@@ -128,3 +130,27 @@ const lessButtom = data => {
 
     
 
+        const purchaseButtom = (data) => {
+            const purchaseBTN = document.getElementById("buttomPurchase")
+            console.log(purchaseBTN)
+
+            purchaseBTN.addEventListener('click', ()=>{
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "Do you want to buy the cart?",
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, purchase!'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                        Swal.fire(
+                            'Purchase!',
+                            'success'
+                        )
+                        }
+                    })
+            })
+        }
+        purchaseButtom(data)
