@@ -38,8 +38,11 @@ const showMenu = ()=>{
 const resizeMenu = ()=>{
     window.addEventListener('resize', ()=>{
         const containerMenu = document.querySelector(".menu_container")
+        const menuBtn = document.getElementById('menu_icon')
         if(screen.width>768)
-        containerMenu.classList.remove("hidden")
+            containerMenu.classList.remove("hidden")
+        else
+            containerMenu.classList.add("hidden")
     })
 }
 

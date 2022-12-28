@@ -11,7 +11,7 @@ body{
 
 .header{
     width: 100%;
-    height: 110px;
+    height: 125px;
     padding: 0 1em;
     border-bottom: 1px solid #fff;
 }
@@ -19,7 +19,7 @@ body{
 
 .logoAndSearchContainer{
     width: 100%;
-    height: 50%;
+    height: 40%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,7 +74,7 @@ body{
 
 .userData{
     width: 70%;
-    height: 50%;
+    height: 60%;
     display: flex;
     float: right;
     flex-wrap: wrap;
