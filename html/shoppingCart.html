@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="../css/card.css">
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/cart.css">
-        <title>Index</title>
+        <title>Cart</title>
     </head>
     <body>
         <!-- HEADER -->
@@ -78,67 +78,45 @@
         <main class="main">
             
             <div class="cart">
-                <div class="cartNumber">
-                    <p>Cart(N°)</p>
+                <div class="cartNumber" id="cartNumber">
                 </div>
                 <div class="separator"></div>
-                <div class="item">
-                    <div class="imgDiv">
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_684441-MLA53001435552_122022-O.webp" alt="">
-                    </div>
-                    <div class="dataItem">
-                        <p class="descriptionItem">Name Description Product</p>
-                        <p class="costShipping"> Valor de envio</p>
-                        <div class="buttomsItem">
-                            <a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Delete</a>
-                            <a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">More product</a>
-                        </div>
-                    </div>
-                    <div class="counterItem">
-                        <buttom class="subtractItem" type="button" name="subtractItem" value="subtractItem">-</buttom>
-                        <p>N°</p>
-                        <buttom class="addItem" type="button" name="addItem" value="addItem">+</buttom>
-                        <div class="stock">
-                        <b>Stock</b>
-                    </div>
-                    </div>
-                    <div class="allValue">
-                        <p>All Value Product</p>
-                    </div>
+                <div class="allItem" id="cart">
+
                 </div>
                 
-                <div class="separator"></div>
 
-                <div class="item">
-                    <div class="imgDiv">
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_684441-MLA53001435552_122022-O.webp" alt="">
-                    </div>
-                    <div class="dataItem">
-                        <p class="descriptionItem">Name Description Product</p>
-                        <p class="costShipping"> Valor de envio</p>
-                        <div class="buttomsItem">
-                            <a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Delete</a>
-                            <a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">More product</a>
-                        </div>
-                    </div>
-                    <div class="counterItem">
-                        <buttom class="subtractItem" type="button" name="subtractItem" value="subtractItem">-</buttom>
-                        <p>N°</p>
-                        <buttom class="addItem" type="button" name="addItem" value="addItem">+</buttom>
-                        <div class="stock">
-                        <b>Stock</b>
-                    </div>
-                    </div>
-                    <div class="allValue">
-                        <p>All Value Product</p>
-                    </div>
-                </div>
-                
-                <div class="separator"></div>
+                <template id="templateCartItem">
+                            <div class="item">
+                                <div class="imgDiv">
+                                    <img >
+                                </div>
+                                <div class="dataItem">
+                                    <p class="descriptionItem">Name Description Product</p>
+                                    <p class="price">Price</p>
+                                    <div class="buttomsItem">
+                                        <a href="#" class="btn btn-primary delet" role="button" data-bs-toggle="button">Delete</a>
+                                        <a href="../index.html" class="btn btn-primary" role="button" data-bs-toggle="button">More product</a>
+                                    </div>
+                                </div>
+                                <div class="counterItem">
+                                    <a href="#" class="btn btn-primary subtractItem" role="button" data-bs-toggle="button">-</a>
+                                    <p class="quantity">N°</p>
+                                    <a href="#" class="btn btn-primary addItem" role="button" data-bs-toggle="button">+</a>
+                                    <div class="stock">
+                                    <b>Stock</b>
+                                </div>
+                                </div>
+                                <div>
+                                    <p class="allValue" >All Value Product</p>
+                                </div>
+                            </div>
+                            
+                            <div class="separator"></div> 
+                </template>
 
-                <div class="fullShipment">
-                    <p>Full shipment</p>
-                    <p class="fullShipmentPrice"> $price</p>
+                <div class="fullShipment" id="fullShipment">
+                    <p>Full Shipment</p>
                 </div>
 
                 <div class="separator"></div>
@@ -153,25 +131,24 @@
 
     <div class="hr"></div>
 
-
     <!-- FOOTER -->
     <footer class="footer">
         <picture class="imgContainerLogo">
             <img
-              class="imgLogo"
-              src="../assets/img/logo/exampleLogo.jpg"
-              alt="BugFix Logo"
-            />
-          </picture>
+                class="imgLogo"
+                src="../assets/img/logo/exampleLogo.jpg"
+                alt="BugFix Logo"
+                />
+            </picture>
 
-        <section class="authors">
-          <h3>Authors</h3>
-          <ul id="list-authors">
-          </ul>
-          </section>
+            <section class="authors">
+            <h3>Authors</h3>
+            <ul id="list-authors">
+            </ul>
+            </section>
     </footer>
     <script src="https://kit.fontawesome.com/7363efb40e.js" crossorigin="anonymous"></script>
     <script src="../js/renderFooter.js"></script>
-
+    <script src="../js/shoppingCart.js"></script>
     </body>
 </html>

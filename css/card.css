@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .products__Container{
     width: 90vw;
     color: red;
@@ -11,15 +10,6 @@
     background: rgb(0, 0, 0);
     position: relative;
     margin: 2em auto 0 auto;
-=======
-.cardContainer{
-    width: 95%;
-    margin-bottom: 1em;
-}
-
-.cardContainer__imgContainer{
-    width: 100%;
->>>>>>> 86eadb15b226a1b4842f13eccbe4099f550e612f
 }
 
 .card__Container::before{
@@ -29,7 +19,6 @@
     left: 0;
     z-index: -1;
     width: 100%;
-<<<<<<< HEAD
     height: 100%;
 
 }
@@ -153,6 +142,3 @@
 
 
 
-=======
-}
->>>>>>> 86eadb15b226a1b4842f13eccbe4099f550e612f
