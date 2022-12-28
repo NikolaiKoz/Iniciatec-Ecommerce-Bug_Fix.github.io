@@ -35,6 +35,7 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 ## Libraries
 
 - [JSDoc](https://jsdoc.app/)
+- [SweetAlert2](https://sweetalert2.github.io/)
 
 ## Frameworks
 
@@ -60,7 +61,6 @@ click on the logo
 
 <div>
     <img src="./assets/img/docs/imgDEsktop1.png">
-    <img src="./assets/img/docs/imgMobile1.png">
 </div>
 
 ### Home
@@ -85,7 +85,7 @@ click on the logo
 
  - The icon cart is a function that is called when the user clicks on the icon cart, this function takes the data of the local storage.
     Shows an alert of the number of products in the cart.
-    When the user clicks on the cart, a summary of the added products is rendered, showing the image, the title and the price for the number of products of the same type. SEGUIR ASKDJASOIFHOIASHFOAS"FHUASOIFHGOASFASODASOFGADSG
+    When the user clicks on the cart, a summary of the added products is rendered, showing the image, the title and the price for the number of products of the same type.
 
 ### Cart resume
 

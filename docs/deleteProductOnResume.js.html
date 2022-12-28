@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>deleteProductOnResume.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addEventCarouselDots">addEventCarouselDots</a></li><li><a href="global.html#addEventFilterCategories">addEventFilterCategories</a></li><li><a href="global.html#callToFunction">callToFunction</a></li><li><a href="global.html#carouselTransition">carouselTransition</a></li><li><a href="global.html#deleteProductOnResume">deleteProductOnResume</a></li><li><a href="global.html#getDataBanner">getDataBanner</a></li><li><a href="global.html#paintDOM">paintDOM</a></li><li><a href="global.html#renderBanner">renderBanner</a></li><li><a href="global.html#resizeBanner">resizeBanner</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">deleteProductOnResume.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Delete product on resume
+ * @Description: Delete product on resume cart.
+ * @argument: none
+ * @returns: void
+ * @Author: Vallejos, Jose Luis
+ */
+const deleteProductOnResume = () => {
+
+    /**
+     * @description: All delete product buttons.
+     * @type {NodeList}
+     * @example: &lt;img class="deleteProduct-btn" src="./assets/img/icons/delete.png" alt="delete icon">
+     */
+    const deleteProductBtn = document.querySelectorAll(".deleteProduct-btn");
+
+    deleteProductBtn.forEach(btn => {
+
+        btn.addEventListener("click", () => {
+
+            /**
+             * @description: Product title.
+             * @type {string}
+             * @example: "Teclado"
+             */
+            let productTitle = btn.parentElement.parentElement.children[0].children[0].textContent;
+
+            /**
+             * @description: All products in cart.
+             * @type {array}
+             */
+            const productsInCart = JSON.parse(localStorage.getItem("Products in Cart"));
+
+            /**
+             * @description: New products in cart, without the product that was deleted.
+             * @type {array}
+             * @example: [{title: "Teclado", price: 100, quantity: 1, totalToPay: 100, image: "https://..."}, {title: "Mouse", price: 50, quantity: 1, totalToPay: 50, image: "https://..."}]
+             */
+            const newProductsInCart = productsInCart.filter(product => product.title !== productTitle);
+
+            /**
+             * @description: Total to pay.
+             * @type {number}
+             * @example: 150
+             * @note: The total to pay is the sum of the total to pay of each product.
+             */
+            totalInCart = newProductsInCart.reduce((acc, product) => acc + product.totalToPay, 0);
+
+            /**
+             * @description: Total to pay in DOM.
+             * @type {HTMLElement}
+             */
+            document.querySelector(".totalToPay").textContent = `Total: $${totalInCart}`;
+
+            /**
+             * @description: Total in cart.
+             * @type {string}
+             * @example: "150"
+             * @note: The total in cart is saved in localStorage as a string.
+             */
+            localStorage.setItem("Total in Cart", JSON.stringify(totalInCart));
+
+            /**
+             * @description: New products in cart.
+             * @type {object}
+             */
+            localStorage.setItem("Products in Cart", JSON.stringify(newProductsInCart));
+
+            /**
+             * @description: Delete product from DOM.
+             */
+            btn.parentElement.parentElement.parentElement.remove();
+            alertCart();
+            noProductsInCart();
+        });
+
+    });
+
+
+};
+
+/**
+ * @description: Call to function.
+ * @type {function}
+ * @returns: void
+ * @note: This function is called when the user clicks on the resume cart button.
+ */
+const callToFunction = () => {
+
+    /**
+     * @description: Resume cart button.
+     * @type {HTMLElement}
+     */
+    const resumeCartBtn = document.querySelector('.container-iconCart');
+
+    resumeCartBtn.addEventListener('click', () => {
+        deleteProductOnResume();
+    });
+
+
+};
+callToFunction();
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.0</a> on Wed Dec 28 2022 16:27:16 GMT-0300 (hora estándar de Argentina) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

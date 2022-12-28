@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix.github.io#readme",
   "dependencies": {
-    "jsdoc": "^4.0.0"
+    "clean-jsdoc-theme": "^4.2.1",
+    "docdash": "^2.0.0",
+    "jaguarjs-jsdoc": "^1.1.0",
+    "jsdoc": "^4.0.0",
+    "jsdoc3-bootstrap": "^0.15.0"
   }
 }
