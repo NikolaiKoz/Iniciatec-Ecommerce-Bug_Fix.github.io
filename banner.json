@@ -1,0 +1,24 @@
+{
+    "desktop":[
+            {
+                "imgUrl": "./assets/img/banners/cyber_week.png"
+            },
+            {
+                "imgUrl": "./assets/img/banners/gamer_day.png"
+            },
+            {
+                "imgUrl": "./assets/img/banners/up_to_50_off.png"
+            }
+        ],
+    "mobile":[
+            {
+                "imgUrl": "./assets/img/banners/cyber_week_mob.png"
+            },
+            {
+                "imgUrl": "./assets/img/banners/gamer_day_mob.png"
+            },
+            {
+                "imgUrl": "./assets/img/banners/up_to_50_off_mob.png"
+            }
+        ]
+}
