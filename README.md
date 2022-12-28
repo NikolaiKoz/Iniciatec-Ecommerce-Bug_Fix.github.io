@@ -53,7 +53,7 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 ## Saw the project all documentation here
 click on the logo
 
-[<img src="./assets/img/logo/bug_fix_logo.png" width=100>](./docs/index.html)
+[<img src="./assets/img/logo/bug_fix_logo.png" width=100>](https://63acae8f00db1c040114b086--dashing-selkie-2210b8.netlify.app/docs/index.html)
 
 #
 
