@@ -9,6 +9,12 @@
     bottom: 28px;
     left: 10px;
 }
+
+
+.hide{
+    display: none;
+}
+
 .resumeCart{
     position: fixed;
     top: 10px;
