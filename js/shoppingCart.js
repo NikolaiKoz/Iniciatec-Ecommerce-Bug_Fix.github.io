@@ -1,6 +1,6 @@
 console.log("js cart");
 const data = JSON.parse(localStorage.getItem('Products in Cart'));
-//console.log(data);
+console.log(data);
 
 const cart = document.getElementById("cart");
 //console.log(cart);
@@ -57,6 +57,7 @@ const deleteButtoms = data => {
 const deleteCartItems = document.querySelectorAll(".delet");
 //console.log("deleteCartItems", deleteCartItems)
 
+//botones para borrar el producto
 deleteCartItems.forEach((cartBtn)=>{
     cartBtn.addEventListener('click', ()=>{
         //console.log(cartBtn.id)
@@ -76,30 +77,40 @@ const lessButtom = data => {
     const lessButtomCartItems = document.querySelectorAll(".subtractItem");
     //console.log("lessButtomCartItems", lessButtomCartItems)
     
+    // botones de eliminar
     lessButtomCartItems.forEach((cartBtn)=>{
         cartBtn.addEventListener('click', ()=>{
             console.log(cartBtn.id)
             console.log(data)
-            data.forEach(item => {
-                if(item.id === cartBtn.id){
-                    item.quantity = item.quantity-1
-                    console.log(item.quantity)
-                }
-                console.log(data)
-                localStorage.removeItem("Products in Cart");
-                localStorage.setItem('Products in Cart', JSON.stringify(data))
-                cart.textContent = ''
-                location. reload()
-                addCart(data);  
-            })
-            /* localStorage.removeItem("Products in Cart");
-            localStorage.setItem('Products in Cart', JSON.stringify(data))
-            location. reload() */
+                data.forEach(item => {
+                if(item.quantity > 0){
+                    if(item.id === cartBtn.id){
+                        item.quantity = item.quantity-1
+                        console.log(item.quantity)
+                    console.log(data)
+                    localStorage.removeItem("Products in Cart");
+                    localStorage.setItem('Products in Cart', JSON.stringify(data))
+                    cart.textContent = ''
+                    location. reload()
+                    addCart(data);
+                    }
+                    }else{
+                data = data.filter(element => element.id !== cartBtn.id)
+                    //console.log(data)
+                    localStorage.removeItem("Products in Cart");
+                    localStorage.setItem('Products in Cart', JSON.stringify(data))
+                    cart.textContent = ''
+                    location. reload()
+                    addCart(data);  
+            }
+                })
+            
         })
     })
     }
     lessButtom(data)
 
+    //botones de agregar otra unidad
     const addButtom = data => {
         const addButtomCartItems = document.querySelectorAll(".addItem");
         //console.log("addButtomCartItems", addButtomCartItems)
@@ -109,17 +120,20 @@ const lessButtom = data => {
                 console.log(cartBtn.id)
                 console.log(data)
                 data.forEach(item => {
-                    if(item.id === cartBtn.id){
-                        item.quantity = item.quantity+1
-                        //console.log(item.quantity)
-                    }
-                    console.log(data)
-                    localStorage.removeItem("Products in Cart");
-                    localStorage.setItem('Products in Cart', JSON.stringify(data))
-                    cart.textContent = ''
-                    location. reload()
-                    addCart(data);  
+                        if(item.id === cartBtn.id){
+                            if(item.quantity < item.stock){
+                                item.quantity = item.quantity+1
+                            //console.log(item.quantity)
+                            }
+                        }
+                        console.log(data)
+                        localStorage.removeItem("Products in Cart");
+                        localStorage.setItem('Products in Cart', JSON.stringify(data))
+                        cart.textContent = ''
+                        location. reload()
+                        addCart(data); 
                 })
+                
                 /* localStorage.removeItem("Products in Cart");
                 localStorage.setItem('Products in Cart', JSON.stringify(data))
                 location. reload() */
@@ -128,8 +142,7 @@ const lessButtom = data => {
         }
         addButtom(data)
 
-    
-
+        //botones de comprar
         const purchaseButtom = (data) => {
             const purchaseBTN = document.getElementById("buttomPurchase")
             console.log(purchaseBTN)
@@ -149,6 +162,10 @@ const lessButtom = data => {
                             'Purchase!',
                             'success'
                         )
+                        setTimeout(function(){
+                            localStorage.removeItem("Products in Cart");
+                            location.href ="../index.html";
+                        }, 1000);
                         }
                     })
             })
