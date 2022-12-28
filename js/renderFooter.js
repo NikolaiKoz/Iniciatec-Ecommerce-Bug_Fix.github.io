@@ -22,7 +22,7 @@ const getAuthors = async () => {
     try {
         const getData = await fetch ("../authors.json");
         const response = await getData.json();
-        paintFooter(JSON.parse(response));
+        paintFooter(response);
     } catch (error) {
         console.log("ups, algo salió mal!");
     }
