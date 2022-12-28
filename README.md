@@ -49,6 +49,11 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 4. Verify that you have the extensions installed (Live Server)
 5. Open the project with Live Server
 
+## Saw the project all documentation here
+click on the logo
+
+[<img src="./assets/img/logo/bug_fix_logo.png" width=100>](./docs/index.html)
+
 #
 
 ## About the project
