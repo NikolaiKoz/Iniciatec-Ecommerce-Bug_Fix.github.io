@@ -1,0 +1,143 @@
+.alertCart{
+    background-color: red;
+    width: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 28px;
+    left: 10px;
+}
+
+
+.hide{
+    display: none;
+}
+
+.resumeCart{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 90%;
+    height: 90vh;
+    background-color: #fff;
+    color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    overflow-y: scroll;
+}
+.container-headerCart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+}
+.container-headerCart img{
+    vertical-align: middle;
+}
+.container-iconCart{
+    position: relative;
+    cursor: pointer;
+}
+.productCart{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #000;
+}
+.resumeContainer{
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    overflow-y: scroll;
+}
+.container-productData{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+.resumeImg{
+    width: 25%;
+    max-height: 80px;
+}
+.resumeTitle{
+    font-size: 14px;
+}
+.resumePrice{
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 89, 255);
+    margin: 0.4rem 0;
+}
+.container-productData_down{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.quantity-bos{
+    display: flex;
+    align-items: center;
+}
+.quantity-btn{
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 0.4rem;
+}
+.deleteProduct-btn{
+    height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.container-footerCart{
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.totalToPay{
+    width: fit-content;
+    margin: 15px auto;
+    text-align: center;
+    padding: 4px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid rgb(0, 89, 255);
+}
+.goToCart-btn{
+    display: flex;
+    width: 100%;
+    background-color: rgb(0, 89, 255);
+    color: #fff;
+    font-size: 26px;
+    border: 2px solid #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    justify-content: center;
+}
+.delete{
+    display: none;
+}
+.hide{
+    display: none;
+}
+
+@media (min-width: 650px) {
+    .resumeCart{
+        width: 60%;
+    }
+}
+
+@media (min-width: 1000px){
+    .resumeCart{
+        width: 40%;
+    }
+}
