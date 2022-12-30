@@ -1,0 +1,15 @@
+#user_menu:hover{
+    cursor: pointer;
+}
+
+.user_menu_container{
+    width: 100%;
+    padding: 1em;
+    position: absolute;
+    left: 0;
+    top: 150px;
+    z-index: 1;
+    background-color: var(--Purple);
+}
+
+

@@ -19,13 +19,16 @@ const paintDOM = (data) => {
       </figure>
       <figcaption>
         <p class="product__type">${product.category}</p>
-        <h2 class="product__name">${product.titleProduct}</h2>
-      </figcaption>
+        </figcaption>
+        
     </section>
     <footer class="footer__card">
       <p class="product__stock delete">${product.stock}</p>
       <p class="product__id delete">${product.idProduct}</p>
-      <p class="product__description">${product.descriptionProduct}</p>
+      <div class="info_card">
+        <h2 class="product__name">${product.titleProduct}</h2>
+        <p class="product__description">${product.descriptionProduct}</p>
+      </div>
       <div class="container__PriceAndBtn">
         <h2 class="product__price">$${product.price}</h2>
         <button class="btn__card">Add to cart</button>

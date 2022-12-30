@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/resetDOM.css" />
     <link rel="stylesheet" href="./css/generalStyles.css">
     <link rel="stylesheet" href="./css/categories.css">
+    <link rel="stylesheet" href="./css/userMenu.css">
     <link rel="stylesheet" href="./css/colorsLight.css">
     <link rel="stylesheet" href="./css/banner.css">
     <link rel="stylesheet" href="./css/card.css">
@@ -75,6 +76,7 @@
           </figcaption>
           <img
             class="imgIcon"
+            id="user_menu"
             src="./assets/img/icons/dots.png"
             alt="Dots icon"
           />
@@ -85,13 +87,17 @@
             alt="Menu icon"
           />
         </figure>
+        <div class="user_menu_container hidden">
+          <ul>
+            <li class="user_menu_item">
+              <a href="./html/contact.html" class="link contact_us">Contact us</a>
+            </li>
+          </ul>
+        </div>
         <div class="menu_container hidden">
           <ul class="category_container">
           </ul>
-          <a href="./html/contact.html" class="link">Contact</a>
         </div>
-        <!-- <ul class="category_container hidden">
-        </ul> -->
       </section>
     </header>
 
@@ -145,5 +151,6 @@
     <script src="./js/menuCategoriesBtn.js"></script>
     <script src="./js/deleteProductOnResume.js"></script>
     <script src="./js/noProductsInCart.js"></script>
+    <script src="./js/userMenuBtn.js"></script>
   </body>
 </html>
