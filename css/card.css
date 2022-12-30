@@ -137,17 +137,12 @@
     0 0 160px #7610AF;
 }
 
-.card__Container footer .container__PriceAndBtn .btn__card{
-    border: none;
-    height: 40px;
-    width: 100px;
-    font-weight: 600;
-    font-size: 1em;
+.productImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 1em;
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    cursor: pointer;
+    overflow: hidden;
 }
 
 .card__Container footer .container__PriceAndBtn .btn__card:hover{
