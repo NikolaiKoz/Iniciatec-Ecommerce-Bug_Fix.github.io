@@ -147,7 +147,7 @@ body{
 }
 
 .fa-bars{
-    color: #fff;
+    color: var(--Fuccia);
 }
 
 .contact-window{
