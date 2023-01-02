@@ -64,8 +64,8 @@
     flex-direction: column;
 }
 .resumeImg{
-    width: 25%;
-    max-height: 80px;
+    max-width: 25%;
+    display: block;
 }
 .resumeTitle{
     font-size: 14px;
