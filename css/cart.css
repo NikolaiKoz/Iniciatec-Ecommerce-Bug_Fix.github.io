@@ -131,6 +131,7 @@
     font-size: 20px;
     font-weight: bold;
 }
+
 @media (max-width: 630px) {
     .item{
         height: auto;
@@ -150,5 +151,10 @@
         display: flex;
         justify-content: end;
         margin-top: 15px;
+    }
+}
+@media (min-width: 1250px) {
+    .descriptionItem{
+        min-width: 400px;
     }
 }

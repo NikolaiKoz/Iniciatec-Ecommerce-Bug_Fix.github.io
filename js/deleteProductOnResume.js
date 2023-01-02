@@ -44,7 +44,7 @@ const deleteProductOnResume = () => {
              * @example: 150
              * @note: The total to pay is the sum of the total to pay of each product.
              */
-            totalInCart = newProductsInCart.reduce((acc, product) => acc + product.totalToPay, 0);
+            const totalInCart = newProductsInCart.reduce((acc, product) => acc + product.totalToPay, 0);
 
             /**
              * @description: Total to pay in DOM.
@@ -59,6 +59,7 @@ const deleteProductOnResume = () => {
              * @note: The total in cart is saved in localStorage as a string.
              */
             localStorage.setItem("Total in Cart", JSON.stringify(totalInCart));
+            console.log(totalInCart)
 
             /**
              * @description: New products in cart.
@@ -72,6 +73,7 @@ const deleteProductOnResume = () => {
             btn.parentElement.parentElement.parentElement.remove();
             alertCart();
             noProductsInCart();
+
         });
 
     });

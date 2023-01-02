@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 28px;
+    bottom: 18px;
     left: 10px;
 }
 
@@ -17,7 +17,7 @@
 
 .resumeCart{
     position: fixed;
-    top: 10px;
+    top: 20px;
     right: 10px;
     width: 90%;
     height: 90vh;
@@ -26,8 +26,8 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    z-index: 3;
-    overflow-y: scroll;
+    z-index: 10;
+    /* overflow-y: scroll; */
 }
 .container-headerCart{
     display: flex;
@@ -64,8 +64,8 @@
     flex-direction: column;
 }
 .resumeImg{
-    width: 25%;
-    max-height: 80px;
+    max-width: 25%;
+    display: block;
 }
 .resumeTitle{
     font-size: 14px;

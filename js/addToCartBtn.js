@@ -1,28 +1,34 @@
+// Camila Heredia
 // cantidad total de productos agregados al carrito
 let productsInCart = 0;
 
 const addEventCartBtn = ()=>{
     const addToCartBtn = document.querySelectorAll(".btn__card")
-
-    // creo array de productos vacío
-    let allProducts;
-    // monto total a pagar
-    let totalInCart;
-
-    if( localStorage.getItem('Products in Cart') == null) {
-        allProducts = [];
-        totalInCart = 0;
-    } else {
-        allProducts = JSON.parse(localStorage.getItem("Products in Cart"));
-        totalInCart = Number(localStorage.getItem("Total in Cart"));
-    }
-
+    
     // recorro todos los botones "agregar al carrito"
     addToCartBtn.forEach((cartBtn)=>{
         // le asigno un addEventListener a cada botón
         cartBtn.addEventListener('click', ()=>{
+            
+                // creo array de productos vacío
+                let allProducts;
+                // monto total a pagar
+                let totalInCart;
+            
+                if( localStorage.getItem('Products in Cart') == null) {
+                    allProducts = [];
+                    totalInCart = 0;
+                } else {
+                    allProducts = JSON.parse(localStorage.getItem("Products in Cart"));
+                    totalInCart = Number(localStorage.getItem("Total in Cart"));
+                }
             // aumento una unidad al total de productos en el carrito
             productsInCart++;
+
+            const modal = document.querySelector(".modal");
+            modal.classList.remove("delete");
+
+            hideModal(modal);
 
             // capturo la card del producto
             const cardProduct = cartBtn.parentElement.parentElement.parentElement;
@@ -87,4 +93,11 @@ const addEventCartBtn = ()=>{
 const setProductsInLocalStorage = (allProducts, totalInCart) => {
     localStorage.setItem("Products in Cart", JSON.stringify(allProducts));
     localStorage.setItem("Total in Cart", totalInCart);
+}
+
+
+const hideModal = (modal) => {
+    setTimeout(() => {
+        modal.classList.add("delete");
+    }, 2500)
 }

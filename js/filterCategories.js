@@ -1,5 +1,6 @@
 /**
  * Adds the event click that filter the products by the selected categories
+ * @author: Rocio Morales
  */
 const addEventFilterCategories = ()=>{
     const categoryItems = document.querySelectorAll(".category_item")
@@ -12,9 +13,9 @@ const addEventFilterCategories = ()=>{
         }else{
             category.classList.add("active_category")
         }
-        categoryItems.forEach(cat => {
-            if(cat.classList.contains("active_category"))
-                activeCategories.push(cat.textContent.toLowerCase())
+        categoryItems.forEach(categoryItem => {
+            if(categoryItem.classList.contains("active_category"))
+                activeCategories.push(categoryItem.textContent.toLowerCase())
         })
 
         products.forEach(product =>{
