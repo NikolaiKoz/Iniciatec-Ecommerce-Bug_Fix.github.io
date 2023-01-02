@@ -41,6 +41,12 @@ addCart(data);
 const cartNumber = document.getElementById("cartNumber")
 const fullShipment = document.getElementById("fullShipment")
 
+
+const newTotalCartPrice = (newValue) => {
+    let totalLS = JSON.parse(localStorage.getItem("Total in Cart"))
+    totalLS = Number(newValue)
+    localStorage.setItem("Total in Cart", JSON.stringify(totalLS));
+}
 /** 
  * 
  * @param objeto recorre el objeto y busca los que estan en el carrito
@@ -54,11 +60,15 @@ const addDatesCart = data => {
 
     //sumo el total de los productos a comprar
     let allPriceCart = data.reduce((acc, item) =>  acc + (item.price * item.quantity) , 0)
+    // let allPriceCart = JSON.parse(localStorage.getItem("Total in Cart"))
 
     let p = document.createElement("p");
     p.innerHTML = "$" + allPriceCart
     p.className = "allPriceCart"
     fullShipment.appendChild(p)
+    let newValue = fullShipment.textContent.split("$")
+    newTotalCartPrice(newValue[newValue.length - 1])
+    console.log(newValue[newValue.length - 1])
 }
 addDatesCart(data)
 
@@ -74,6 +84,7 @@ deleteCartItems.forEach((cartBtn)=>{
         localStorage.setItem('Products in Cart', JSON.stringify(data))
         cart.textContent = ''
         location. reload()
+        console.log(fullShipment.textContent)
         addCart(data);  
     })
 })
@@ -162,6 +173,7 @@ const lessButtom = data => {
                             )
                             setTimeout(function(){
                                 localStorage.removeItem("Products in Cart");
+                                localStorage.removeItem("Total in Cart");
                                 location.href ="../index.html";
                             }, 1000);
                             }
