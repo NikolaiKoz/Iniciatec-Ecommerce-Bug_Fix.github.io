@@ -9,7 +9,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/resetDOM.css" />
         <link rel="stylesheet" href="../css/generalStyles.css">
-        <link rel="stylesheet" href="./css/userMenu.css">
+        <link rel="stylesheet" href="../css/userMenu.css">
         <link rel="stylesheet" href="../css/colorsLight.css">
         <link rel="stylesheet" href="../css/banner.css">
         <link rel="stylesheet" href="../css/card.css">
@@ -19,7 +19,7 @@
     </head>
     <body>
         <!-- HEADER -->
-        <h1 class="neonText">BUG FIX</h1>
+        <h1 class="neonText delete">BUG FIX</h1>
         <header class="header">
         <section class="logoAndSearchContainer">
             <picture class="imgContainerLogo">
@@ -64,6 +64,7 @@
             </figcaption>
             <img
                 class="imgIcon"
+                id="user_menu"
                 src="../assets/img/icons/dots.png"
                 alt="Dots icon"
             />
@@ -73,6 +74,13 @@
                 alt="Menu icon"
             />
             </figure>
+            <div class="user_menu_container hidden">
+                <ul>
+                    <li class="user_menu_item">
+                        <a href="./contact.html" class="link contact_us">Contact us</a>
+                    </li>
+                </ul>
+            </div>
         </section>
         </header>
 
@@ -153,6 +161,7 @@
             </section>
     </footer>
     <script src="https://kit.fontawesome.com/7363efb40e.js" crossorigin="anonymous"></script>
+    <script src="../js/userMenuBtn.js"></script>
     <script src="../js/renderFooter.js"></script>
     <script src="../js/shoppingCart.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
