@@ -31,7 +31,10 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Git](https://git-scm.com/)
-
+- [Canva](https://www.canva.com/es_es/)
+- [Font Awesome](https://fontawesome.com/)
+- [Excalidraw](https://excalidraw.com/)
+- [Flaticon](https://www.flaticon.com/)
 ## Libraries
 
 - [JSDoc](https://jsdoc.app/)
