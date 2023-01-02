@@ -1,3 +1,4 @@
+// Camila Heredia
 // cantidad total de productos agregados al carrito
 let productsInCart = 0;
 
@@ -23,6 +24,11 @@ const addEventCartBtn = ()=>{
         cartBtn.addEventListener('click', ()=>{
             // aumento una unidad al total de productos en el carrito
             productsInCart++;
+
+            const modal = document.querySelector(".modal");
+            modal.classList.remove("delete");
+
+            hideModal(modal);
 
             // capturo la card del producto
             const cardProduct = cartBtn.parentElement.parentElement.parentElement;
@@ -87,4 +93,11 @@ const addEventCartBtn = ()=>{
 const setProductsInLocalStorage = (allProducts, totalInCart) => {
     localStorage.setItem("Products in Cart", JSON.stringify(allProducts));
     localStorage.setItem("Total in Cart", totalInCart);
+}
+
+
+const hideModal = (modal) => {
+    setTimeout(() => {
+        modal.classList.add("delete");
+    }, 2500)
 }

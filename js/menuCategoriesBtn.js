@@ -1,3 +1,8 @@
+/**
+ * @author: Rocio Morales
+ * @param {} data 
+ * @returns 
+ */
 const obtainCategories = (data)=>{
     const productCategories = data.map(product => {
         return product.category
@@ -38,8 +43,11 @@ const showMenu = ()=>{
 const resizeMenu = ()=>{
     window.addEventListener('resize', ()=>{
         const containerMenu = document.querySelector(".menu_container")
+        const menuBtn = document.getElementById('menu_icon')
         if(screen.width>768)
-        containerMenu.classList.remove("hidden")
+            containerMenu.classList.remove("hidden")
+        else
+            containerMenu.classList.add("hidden")
     })
 }
 

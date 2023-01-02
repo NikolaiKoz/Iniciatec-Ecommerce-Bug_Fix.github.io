@@ -1,3 +1,4 @@
+// Camila Heredia
 const paintFooter = (authors) => {
     const listAuthors = document.getElementById("list-authors");
     const fragment = document.createDocumentFragment();
@@ -24,7 +25,7 @@ const getAuthors = async () => {
         const response = await getData.json();
         paintFooter(response);
     } catch (error) {
-        console.log("ups, algo salió mal!");
+        console.log(error);
     }
 }
 
