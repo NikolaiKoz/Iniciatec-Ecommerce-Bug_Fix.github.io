@@ -48,19 +48,19 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 ## How to use
 
 
-
 1. Copy the repository link (Github: https://github.com/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix.github.io)
-
-2. Open the terminal and type git clone and paste the link, press enter.
-
+2. Open the terminal and type `git clone` and paste the link, press enter.
 3. Open the project in your code editor
 To open the site from Visual Studio Code:
-
-4. Verify that you have the extensions installed (Live Server: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-
-5. Open the project with Live Server clicking in the "Go live" button in the toolbar at the bottom of the screen
-
-6. The browser with the site opens
+    4.a. Verify that you have the extensions installed (Live Server: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+    5.a. Open the project with Live Server clicking in the "Go live" button in the toolbar at the bottom of the screen
+    6.a. The browser with the site opens
+To open the site from the browser:
+    4.b. Open your browser
+    5.b. Press "Ctrl+o" keys
+    6.b. In the window that opens select the folder where the proyect is stored
+    7.b. Select the "index.html" file inside the folder
+    8.b. The site opens in the browser
 
 
 ## Saw the project all documentation here
