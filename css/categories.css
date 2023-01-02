@@ -29,6 +29,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    border: solid 1px var(--text);
+
 }
 
 .category_item{
@@ -87,16 +89,19 @@
         display: none;
     }
     .menu_container{
-        width: 90%;
-        background-color: transparent;
+        /* width: 90%; */
+        /* background-color: transparent; */
         position: static;
-        margin-left: 1rem;
+        /* margin-left: 1rem; */
+        margin: 1.5rem 0 0;
     }
     .category_container{
         height: 100%;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
+        padding: 0.4rem;
     }
 
     .category_item{

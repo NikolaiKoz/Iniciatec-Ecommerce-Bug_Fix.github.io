@@ -1,3 +1,4 @@
+// Camila Heredia
 // renderizar productos en el carrito
 const resumeCart = () => {
 

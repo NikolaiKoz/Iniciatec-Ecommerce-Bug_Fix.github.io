@@ -1,3 +1,4 @@
+// Camila Heredia
 const searchProducts = () => {
     const searchBar = document.getElementById("searchBar");
 

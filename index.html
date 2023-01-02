@@ -21,6 +21,9 @@
     <h1 class="neonText delete">BUG FIX</h1>
     <header class="header">
       <section class="logoAndSearchContainer">
+        <!-- menu hambrguesa -->
+        <i id="menu_icon" class="fa-solid fa-bars"></i>
+
         <!-- logo -->
         <picture class="imgContainerLogo">
           <a href="./index.html">
@@ -44,6 +47,14 @@
           <input id="searchBar" class="inputSearch" type="text" placeholder="Search" />
         </section>
 
+        <figcaption style="display: flex; align-items: center;">
+          <img
+          class="imgIcon margin"
+          src="./assets/img/icons/account.png"
+          alt="Cart icon"
+        />
+        </figcaption>
+
         <!-- carrito -->
         <figure class="imgContainer container-iconCart">
           <img class="imgIcon" src="./assets/img/icons/cart.png" alt="Cart icon" onclick="showResumeCart()">
@@ -63,41 +74,6 @@
         </section>
       </section>
 
-      <section class="userData">
-        <figure class="imgContainer userInfoContainer">
-          <figcaption style="display: flex; align-items: center;">
-            <img
-            class="imgIcon margin"
-            src="./assets/img/icons/account.png"
-            alt="Cart icon"
-          />
-            <h2 class="userInfo">User name</h2>
-          </figcaption>
-          <img
-            class="imgIcon"
-            id="user_menu"
-            src="./assets/img/icons/dots.png"
-            alt="Dots icon"
-          />
-          <img
-            class="imgIcon"
-            id="menu_icon"
-            src="./assets/img/icons/menu.png"
-            alt="Menu icon"
-          />
-        </figure>
-        <div class="user_menu_container hidden">
-          <ul>
-            <li class="user_menu_item">
-              <a href="./html/contact.html" class="link contact_us">Contact us</a>
-            </li>
-          </ul>
-        </div>
-        <div class="menu_container hidden">
-          <ul class="category_container">
-          </ul>
-        </div>
-      </section>
     </header>
 
    <div class="hr"></div>
@@ -112,11 +88,23 @@
           </ul>
         </article>
 
+        <!-- categorías -->
+        <div class="menu_container hidden">
+          <ul class="category_container">
+          </ul>
+        </div>
+        
+        <!-- contacto -->
+        <a href="./html/contact.html" class="contact-window">Contact us</a>
 
         <section class="products__Container" id="products__Container">
           <!-- Is rendered in renderCards.js -->
         </section>
 
+        <!-- modal -->
+        <section class="modal delete">
+          <p>You have added a product to the cart</p>
+        </section>
 
     </main>
 
