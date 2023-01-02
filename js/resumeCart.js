@@ -30,7 +30,7 @@ const resumeCart = () => {
                 </div>
                 <img class="deleteProduct-btn" src="./assets/img/icons/delete.png" alt="delete icon">
 
-               </div>
+              </div>
             </div>
             `
             containerResumeCart.appendChild(productCart);

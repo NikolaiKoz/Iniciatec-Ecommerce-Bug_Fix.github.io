@@ -1,8 +1,17 @@
+//console.log("js cart");
+//se crea un objeto de la data guardada en local storage
 const data = JSON.parse(localStorage.getItem('Products in Cart'));
-
+//console.log(data);
+//se captura el div donde va a ir pintada la informacion de la cart
 const cart = document.getElementById("cart");
 //console.log(cart);
 
+/** 
+ * 
+ * @param objeto recorre el objeto segun los comprados
+ * @returns un articulo en la cart
+ * 
+**/
 const addCart = data => {
     
     const template = document.querySelector("#templateCartItem").content;
@@ -21,6 +30,7 @@ const addCart = data => {
         template.querySelector('.allValue').textContent = "$" +(item.price * item.quantity)
         template.querySelector('.addItem').setAttribute("id", item.id);
         template.querySelector('.subtractItem').setAttribute("id", item.id);
+        //se le agrega un id con el id del producto para usarlo en los botones
         template.querySelector('.delet').setAttribute("id", item.id);
 
     const clone = template.cloneNode(true);
@@ -35,6 +45,12 @@ addCart(data);
 const cartNumber = document.getElementById("cartNumber")
 const fullShipment = document.getElementById("fullShipment")
 
+/** 
+ * 
+ * @param objeto recorre el objeto y busca los que estan en el carrito
+ * @returns el valor total de la compra
+ * 
+**/
 const addDatesCart = data => {
     let div = document.createElement("div");
     div.innerHTML = `Cart(${data.length})`
@@ -51,6 +67,7 @@ const addDatesCart = data => {
 }
 addDatesCart(data)
 
+//funcion para borrar el producto seleccionado
 const deleteButtoms = data => {
 const deleteCartItems = document.querySelectorAll(".delet");
 //console.log("deleteCartItems", deleteCartItems)
@@ -65,19 +82,22 @@ deleteCartItems.forEach((cartBtn)=>{
         localStorage.setItem('Products in Cart', JSON.stringify(data))
         cart.textContent = ''
         location. reload()
-        addCart(data);
+        addCart(data);  
     })
 })
 }
 deleteButtoms(data)
 
+//funcion para restar 1 articulo
 const lessButtom = data => {
     const lessButtomCartItems = document.querySelectorAll(".subtractItem");
     //console.log("lessButtomCartItems", lessButtomCartItems)
-
-    // botones de eliminar
+    
+    // botones de eliminar 1 unidad
     lessButtomCartItems.forEach((cartBtn)=>{
         cartBtn.addEventListener('click', ()=>{
+            console.log(cartBtn.id)
+            console.log(data)
                 data.forEach(item => {
                 if(item.quantity > 0){
                     if(item.id === cartBtn.id){
@@ -100,17 +120,18 @@ const lessButtom = data => {
                     addCart(data);
             }
                 })
-
+            
         })
     })
     }
     lessButtom(data)
 
-    //botones de agregar otra unidad
+    //funcion para aggregar 1 articulo
     const addButtom = data => {
         const addButtomCartItems = document.querySelectorAll(".addItem");
         //console.log("addButtomCartItems", addButtomCartItems)
-
+        
+        //botones de agregar otra unidad
         addButtomCartItems.forEach((cartBtn)=>{
             cartBtn.addEventListener('click', ()=>{
                 console.log(cartBtn.id)
@@ -127,8 +148,9 @@ const lessButtom = data => {
                         localStorage.setItem('Products in Cart', JSON.stringify(data))
                         cart.textContent = ''
                         location. reload()
-                        addCart(data);
+                        addCart(data); 
                 })
+                
                 /* localStorage.removeItem("Products in Cart");
                 localStorage.setItem('Products in Cart', JSON.stringify(data))
                 location. reload() */
@@ -140,30 +162,45 @@ const lessButtom = data => {
         //botones de comprar
         const purchaseButtom = (data) => {
             const purchaseBTN = document.getElementById("buttomPurchase")
+            //console.log(purchaseBTN)
 
             purchaseBTN.addEventListener('click', ()=>{
-                Swal.fire({
-                    title: 'Are you sure?',
-                    text: "Do you want to buy the cart?",
-                    icon: 'question',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, purchase!'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                        Swal.fire(
-                            'Purchase!',
-                            'success'
-                        )
-                        setTimeout(function(){
-                            localStorage.removeItem("Products in Cart");
-                            localStorage.removeItem("Total in Cart");
-
-                            location.href ="../index.html";
-                        }, 1000);
-                        }
-                    })
+                if(data.length > 0){
+                    Swal.fire({
+                        title: 'Are you sure?',
+                        text: "Do you want to buy the cart?",
+                        icon: 'question',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Yes, purchase!'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                            Swal.fire(
+                                'Purchase!',
+                                'success'
+                            )
+                            setTimeout(function(){
+                                localStorage.removeItem("Products in Cart");
+                                location.href ="../index.html";
+                            }, 1000);
+                            }
+                        })
+                }else{
+                    Swal.fire({
+                        title: 'Not products in Cart',
+                        text: "Impossible to make the purchase",
+                        icon: 'error',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'More products'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                location.href ="../index.html";
+                            }
+                        })
+                }
             })
         }
         purchaseButtom(data)
