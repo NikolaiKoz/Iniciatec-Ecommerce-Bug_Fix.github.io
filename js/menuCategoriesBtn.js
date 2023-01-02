@@ -1,7 +1,7 @@
 /**
  * @author: Rocio Morales
- * @param {} data 
- * @returns 
+ * @param {data}
+ * @returns void
  */
 const obtainCategories = (data)=>{
     const productCategories = data.map(product => {
