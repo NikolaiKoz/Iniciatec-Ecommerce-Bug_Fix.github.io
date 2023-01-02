@@ -1,3 +1,4 @@
+// Camila Heredia
 /**
  *
  * @param {Array} data Array of objects that contains the information of each product
