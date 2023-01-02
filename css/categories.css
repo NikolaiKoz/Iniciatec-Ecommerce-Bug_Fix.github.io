@@ -20,7 +20,7 @@
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    top:25%;
+    top: 130px;;
     right: 0%;
     z-index: 1;
 }
@@ -35,12 +35,7 @@
     padding: 0.5rem 0.75rem;
 }
 
-.link{
-    color: var(--text);
-    padding: 0.5rem 0.75rem;
-}
-
-.category_item:hover, .link:hover{
+.category_item:hover{
     transform: scale(1.02);
     text-shadow: 
     0px 0px 5px var(--Purple),

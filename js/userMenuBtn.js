@@ -3,7 +3,6 @@ const showUserMenu = ()=>{
     const userMenuIcon = document.querySelector("#user_menu")
 
     userMenuIcon.addEventListener('click', ()=>{
-        console.log('click!')
         if(userMenuContainer.classList.contains('hidden')){
             userMenuContainer.classList.remove('hidden')
         }else{

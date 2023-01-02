@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/resetDOM.css" />
     <link rel="stylesheet" href="../css/generalStyles.css">
-    <link rel="stylesheet" href="./css/userMenu.css">
+    <link rel="stylesheet" href="../css/userMenu.css">
     <link rel="stylesheet" href="../css/colorsLight.css">
     <link rel="stylesheet" href="../css/banner.css">
     <link rel="stylesheet" href="../css/card.css">
@@ -51,6 +51,7 @@
           </figcaption>
           <img
             class="imgIcon"
+            id="user_menu"
             src="../assets/img/icons/dots.png"
             alt="Dots icon"
           />
@@ -60,6 +61,13 @@
             alt="Menu icon"
           />
         </figure>
+        <div class="user_menu_container hidden">
+          <ul>
+            <li class="user_menu_item">
+              <a href="./contact.html" class="link contact_us">Contact us</a>
+            </li>
+          </ul>
+        </div>
       </section>
     </header>
 
@@ -91,55 +99,23 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <picture class="imgContainerLogo">
-        <a href="../index.html">
+        <picture class="imgContainerLogo">
             <img
               class="imgLogo"
               src="../assets/img/logo/bug_fix_logo.png"
               alt="BugFix Logo"
             />
-        </a>
-      </picture>
+          </picture>
 
         <section class="authors">
           <h3>Authors</h3>
-          <ul>
-            <li>
-                  <figure class="imgContainerFooter">
-                    <a href="https://www.linkedin.com/in/maxi-gartner/" target="_blank"><i class="fa-brands fa-linkedin imgIcon"></i></a>
-                    <a href="" target="_blank"><i class="fa-brands fa-github imgIcon"></i></a>
-                      <figcaption>Maxi Gartner</figcaption>
-                  </figure>
-            </li>
-
-            <li>
-                  <figure class="imgContainerFooter">
-                    <a href="https://www.linkedin.com/in/camila-herediav/" target="_blank"><i class="fa-brands fa-linkedin imgIcon"></i></a>
-                    <a href="https://github.com/camilaheredia9" target="_blank"><i class="fa-brands fa-github imgIcon"></i></a>
-                      <figcaption>Camila Heredia</figcaption>
-                  </figure>
-            </li>
-
-            <li>
-                  <figure class="imgContainerFooter">
-                    <a href="https://www.linkedin.com/in/mar%C3%ADa-del-roc%C3%ADo-morales-72389011b/" target="_blank"><i class="fa-brands fa-linkedin imgIcon"></i></a>
-                    <a href="https://github.com/Rochius" target="_blank"><i class="fa-brands fa-github imgIcon"></i></a>
-                      <figcaption>Rocio Morales</figcaption>
-                  </figure>
-            </li>
-
-            <li>
-                  <figure class="imgContainerFooter">
-                    <a href="https://www.linkedin.com/in/vallejosjoseluis/" target="_blank"><i class="fa-brands fa-linkedin imgIcon"></i></a>
-                    <a href="https://github.com/NikolaiKoz" target="_blank"><i class="fa-brands fa-github imgIcon"></i></a>
-                      <figcaption>Jose Luis Vallejos</figcaption>
-                  </figure>
-            </li>
-
-            </ul>
+          <ul id="list-authors">
+          </ul>
           </section>
     </footer>
   <script src="https://kit.fontawesome.com/7363efb40e.js" crossorigin="anonymous"></script>
+  <script src="../js/userMenuBtn.js"></script>
+  <script src="../js/renderFooter.js"></script>
   <script src="../js/contactForm.js"></script>
   </body>
 </html>
