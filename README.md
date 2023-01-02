@@ -31,7 +31,10 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Git](https://git-scm.com/)
-
+- [Canva](https://www.canva.com/es_es/)
+- [Font Awesome](https://fontawesome.com/)
+- [Excalidraw](https://excalidraw.com/)
+- [Flaticon](https://www.flaticon.com/)
 ## Libraries
 
 - [JSDoc](https://jsdoc.app/)
@@ -43,6 +46,7 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 - [Google Fonts](https://fonts.google.com/)
 #
 ## How to use
+
 
 1. Copy the repository link (Github: https://github.com/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix.github.io)
 2. Open the terminal and type `git clone` and paste the link, press enter.
@@ -57,6 +61,7 @@ To open the site from the browser:
     6.b. In the window that opens select the folder where the proyect is stored
     7.b. Select the "index.html" file inside the folder
     8.b. The site opens in the browser
+
 
 ## Saw the project all documentation here
 click on the logo
