@@ -13,9 +13,9 @@ const addEventFilterCategories = ()=>{
         }else{
             category.classList.add("active_category")
         }
-        categoryItems.forEach(category => {
-            if(category.classList.contains("active_category"))
-                activeCategories.push(cat.textContent.toLowerCase())
+        categoryItems.forEach(categoryItem => {
+            if(categoryItem.classList.contains("active_category"))
+                activeCategories.push(categoryItem.textContent.toLowerCase())
         })
 
         products.forEach(product =>{
