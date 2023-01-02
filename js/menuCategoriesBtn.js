@@ -1,3 +1,8 @@
+/**
+ * @author: Rocio Morales
+ * @param {} data 
+ * @returns 
+ */
 const obtainCategories = (data)=>{
     const productCategories = data.map(product => {
         return product.category
