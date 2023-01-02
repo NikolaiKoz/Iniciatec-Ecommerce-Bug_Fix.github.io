@@ -11,7 +11,7 @@ body{
 
 .header{
     width: 100%;
-    height: 110px;
+    height: 130px;
     padding: 0 1em;
     border-bottom: 1px solid #fff;
 }
@@ -101,6 +101,27 @@ body{
 
 .margin{
     margin-right: 10px;
+}
+
+.link{
+    color: var(--text);
+    padding: 0.5rem 0.75rem;
+}
+
+.link:hover{
+    transform: scale(1.02);
+    text-shadow: 
+    0px 0px 5px var(--Purple),
+    0px 0px 8px var(--Purple),
+    0px 0px 11px var(--Purple),
+    0px 0px 14px var(--Purple),
+    0px 0px 17px var(--Purple),
+    0px 0px 19px var(--Purple),
+    0px 0px 21px var(--Purple),
+    0px 0px 23px var(--Purple);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 200ms;
 }
 
 /* MAIN */

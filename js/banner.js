@@ -1,5 +1,6 @@
 /**
  * Gets the data of the banner pictures from API
+ * @author: Rocio Morales
  */
 const getDataBanner = async () => {
   try {

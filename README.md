@@ -31,7 +31,10 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Git](https://git-scm.com/)
-
+- [Canva](https://www.canva.com/es_es/)
+- [Font Awesome](https://fontawesome.com/)
+- [Excalidraw](https://excalidraw.com/)
+- [Flaticon](https://www.flaticon.com/)
 ## Libraries
 
 - [JSDoc](https://jsdoc.app/)
@@ -44,16 +47,26 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 #
 ## How to use
 
-1. Copy the repository link
-2. Open the terminal and type `git clone` and paste the link
+
+1. Copy the repository link (Github: https://github.com/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix.github.io)
+2. Open the terminal and type `git clone` and paste the link, press enter.
 3. Open the project in your code editor
-4. Verify that you have the extensions installed (Live Server)
-5. Open the project with Live Server
+To open the site from Visual Studio Code:
+    4.a. Verify that you have the extensions installed (Live Server: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+    5.a. Open the project with Live Server clicking in the "Go live" button in the toolbar at the bottom of the screen
+    6.a. The browser with the site opens
+To open the site from the browser:
+    4.b. Open your browser
+    5.b. Press "Ctrl+o" keys
+    6.b. In the window that opens select the folder where the proyect is stored
+    7.b. Select the "index.html" file inside the folder
+    8.b. The site opens in the browser
+
 
 ## Saw the project all documentation here
 click on the logo
 
-[<img src="./assets/img/logo/bug_fix_logo.png" width=100>](./docs/index.html)
+[<img src="./assets/img/logo/bug_fix_logo.png" width=100>](https://63acae8f00db1c040114b086--dashing-selkie-2210b8.netlify.app/docs/index.html)
 
 #
 
