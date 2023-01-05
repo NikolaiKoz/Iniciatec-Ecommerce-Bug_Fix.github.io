@@ -88,8 +88,8 @@ const addEventCarouselDots = () => {
 
       carouselBox.style.transform = `translateX(${move}%)`;
 
-      carouselDots.forEach((dot, j) => {
-        carouselDots[j].classList.remove("activ");
+      carouselDots.forEach((dot) => {
+        dot.classList.remove("activ");
       });
       carouselDots[i].classList.add("activ");
       if (i === carouselDots.length - 1) {
@@ -105,28 +105,31 @@ const addEventCarouselDots = () => {
 const carouselTransition = () => {
   const carouselBox = document.querySelector(".carousel_box");
   const carouselItem = document.querySelectorAll(".carouselImgContainer");
+  count = 1
   const carouselDots = document.querySelectorAll(".carousel_dot");
   const interval = 3000;
 
   setInterval(function () {
     let move = count * -(100 / 3);
     carouselBox.style.transform = `translateX(${move}%)`;
-    count++;
-    if (count == carouselItem.length) {
-      setTimeout(function () {
-        carouselBox.style.transform = "translate(0%)";
-        carouselBox.style.transition = "transform 0s";
-        count = 1;
-        carouselDots.forEach((dot, i) => {
-          carouselDots[i].classList.remove("activ");
-        });
-        carouselDots[count - 1].classList.add("activ");
-      }, 3000);
-    }
-    carouselDots.forEach((dot, i) => {
-      carouselDots[i].classList.remove("activ");
+    carouselBox.style.transition = "transform 0.8s"
+    carouselDots.forEach((dot) => {
+      dot.classList.remove("activ");
     });
-    carouselDots[count - 1].classList.add("activ");
+    carouselDots[count].classList.add("activ");
+
+    count++;
+    if(count === carouselItem.length){
+      setTimeout(()=>{
+        carouselBox.style.transform = "translateX(0%)";
+        carouselBox.style.transition = "transform 0s"
+        count = 1
+        carouselDots.forEach((dot) => {
+          dot.classList.remove("activ");
+        });
+        carouselDots[count-1].classList.add("activ");
+      }, 2000)
+    }
   }, interval);
 };
 
