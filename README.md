@@ -1,10 +1,28 @@
+d
+<div align="center">
+
+<img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="" src="https://img.shields.io/github/repo-size/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Issues" src="https://img.shields.io/github/issues/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Closed Issues" src="https://img.shields.io/github/issues-closed/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Package.json Version" src="https://img.shields.io/github/package-json/v/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Commit Activity (Week)" src="https://img.shields.io/github/commit-activity/w/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Commit Activity (Month)" src="https://img.shields.io/github/commit-activity/m/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Commit Activity (Year)" src="https://img.shields.io/github/commit-activity/y/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="Github License" src="https://img.shields.io/github/license/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" />[![Netlify Status](https://api.netlify.com/api/v1/badges/9397939f-fff9-4fa7-a7b1-866f8a626a72/deploy-status)](https://app.netlify.com/sites/dashing-selkie-2210b8/deploys)
+
+</div>
+
 # BugFix
 
 BugFix is an e-commerce project for the Inciatec - Accenture bootcamp. The team members chose the theme of a computer store, this page is inspired by e-sports and the gamer theme.
 
 In this project we had to use HTML, CSS and vanilla JavaScript, but our educators gave us freedom to use any framework or library we wanted.
 
-- The projects are carried out with hundreds of tools, languages and hours of work, but the most important thing for us is the passion for web development.
+- The projects are carried out with hundreds of tools, languages and hours of work, but the most important thing for us is the passion for web development 💗
+
+#
+
+## Index
+
+- [Authors](#authors) 🧑‍💼
+- [Technologies](#technologies) 🖥️
+- [Tools](#tools) 🔨
+- [Libraries](#libraries) 📚
+- [Frameworks](#frameworks) 📦
+
 
 #
 
@@ -22,25 +40,35 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 
 ## Technologies
 
-- HTML
-- CSS
-- JavaScript
+<div align="center">
+
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+</div>
 
 
 ## Tools
 
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Git](https://git-scm.com/)
-- [Canva](https://www.canva.com/es_es/)
-- [Font Awesome](https://fontawesome.com/)
-- [Excalidraw](https://excalidraw.com/)
-- [Flaticon](https://www.flaticon.com/)
+<div aling="center">
+
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Canva](https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white)
+![Font Awesome](https://img.shields.io/badge/Font%20Awesome-339AF0?style=for-the-badge&logo=font-awesome&logoColor=white)
+![Excalidraw](https://img.shields.io/badge/Excalidraw-0052CC?style=for-the-badge&logo=excalidraw&logoColor=white)
+![Flaticon](https://img.shields.io/badge/Flaticon-FFC107?style=for-the-badge&logo=flaticon&logoColor=white)
+
+</div>
+
 ## Libraries
 
 - [JSDoc](https://jsdoc.app/)
 - [SweetAlert2](https://sweetalert2.github.io/)
 
 ## Frameworks
+
+<div align="center"></div>
 
 - [Bootstrap](https://getbootstrap.com/)
 - [Google Fonts](https://fonts.google.com/)
@@ -62,11 +90,17 @@ To open the site from the browser:
     7.b. Select the "index.html" file inside the folder
     8.b. The site opens in the browser
 
-
+#
 ## Saw the project all documentation here
-click on the logo
 
-[<img src="./assets/img/logo/bug_fix_logo.png" width=100>](https://63acae8f00db1c040114b086--dashing-selkie-2210b8.netlify.app/docs/index.html)
+<div align="center">
+
+### click on the logo 👇
+
+[<img src="./assets/img/logo/bug_fix_logo.png" width=300>](https://63acae8f00db1c040114b086--dashing-selkie-2210b8.netlify.app/docs/index.html)
+
+</div>
+
 
 #
 
