@@ -153,8 +153,6 @@
         margin-top: 15px;
     }
 }
-@media (min-width: 1250px) {
     .descriptionItem{
-        min-width: 400px;
+        max-width: 200px;
     }
-}
