@@ -1,4 +1,4 @@
-d
+
 <div align="center">
 
 <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="" src="https://img.shields.io/github/repo-size/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Issues" src="https://img.shields.io/github/issues/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Closed Issues" src="https://img.shields.io/github/issues-closed/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Package.json Version" src="https://img.shields.io/github/package-json/v/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Commit Activity (Week)" src="https://img.shields.io/github/commit-activity/w/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Commit Activity (Month)" src="https://img.shields.io/github/commit-activity/m/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="GitHub Commit Activity (Year)" src="https://img.shields.io/github/commit-activity/y/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" /><img alt="Github License" src="https://img.shields.io/github/license/NikolaiKoz/Iniciatec-Ecommerce-Bug_Fix" />[![Netlify Status](https://api.netlify.com/api/v1/badges/9397939f-fff9-4fa7-a7b1-866f8a626a72/deploy-status)](https://app.netlify.com/sites/dashing-selkie-2210b8/deploys)
@@ -50,7 +50,7 @@ In this project we had to use HTML, CSS and vanilla JavaScript, but our educator
 
 ## Tools
 
-<div aling="center">
+<div align="center">
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
