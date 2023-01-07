@@ -5,7 +5,6 @@
 #menu_icon:hover{
     
     cursor: pointer;
-    /* color: var(--Purple); */
     filter: drop-shadow(0 0 10px #7610AF,
     0 0 20px #7610AF,
     0 0 40px #7610AF,
@@ -68,16 +67,11 @@
 }
 
 .hidden{
+    transition: all 4s ease-in-out;
     display: none;
 }
 
 @media screen and (min-width: 768px) {
-    /* .header{
-        height: 110px;
-    } */
-    /* .logoAndSearchContainer{
-        height: 45%;
-    } */
     .userData{
         width: 90%;
         flex-wrap: nowrap;
@@ -89,11 +83,7 @@
         display: none;
     }
     .menu_container{
-        /* width: 90%; */
-        /* background-color: transparent; */
         position: static;
-        /* margin-left: 1rem; */
-        margin: 1.5rem 0 0;
     }
     .category_container{
         height: 100%;
