@@ -64,14 +64,14 @@ const fullShipment = document.getElementById("fullShipment")
                         cartNumber.textContent = ''
                         fullShipment.textContent = ''
                         addDatesCart(data)
-                        addCart(data); 
+                        addCart(data);
                 })
             }
             // disminuir cantidad de producto
             if(e.target.classList.contains('subtractItem')){
                 e.preventDefault()
                 data.forEach(item => {
-                    if(item.quantity !== 0){
+                    if(item.quantity !== 1){
                         if(item.id === e.target.id){
                             item.quantity--;
                         localStorage.removeItem("Products in Cart");
