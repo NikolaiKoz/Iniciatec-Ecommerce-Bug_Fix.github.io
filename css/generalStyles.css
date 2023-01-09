@@ -168,29 +168,57 @@ body{
     animation: animate 20s linear infinite;
 }
 
-.fa-bars{
-    color: var(--Fuccia);
+.container-menu{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: var(--Fuccia);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 6;
+}
+
+.fa-filter{
+    color: #fff;
 }
 
 .contact-window{
-    position: fixed;
     font-weight: bold;
-    padding: 0.8rem 1rem;
+    padding: 0.4rem 0.6rem;
     color: #fff;
     background-color: var(--Fuccia);
     border-radius: 2rem;
-    right: 1rem;
-    bottom: 1rem;
+    position: fixed;
     z-index: 5;
 }
 
 .modal{
     position: fixed;
     top: 50px;
-    font-size: 1.2rem;
-    color: blue;
-    background-color: #fff;
-    border: 1px solid blue;
-    border-radius: 2rem;
-    padding: 0.6rem 0.8rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: blue;
+    border: 1px solid var(--Fuccia);
+    border-radius: 0.4rem;
+    padding: 1.6rem 2.6rem;
+    z-index: 99;
+}
+
+@media screen and (min-width: 768px){
+    .contact-window{
+        padding: 0.6rem 0.8rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .modal{
+        width: 80%;
+        font-size: 1rem;
+        padding: 0.6rem 0.8rem;
+    }
 }
