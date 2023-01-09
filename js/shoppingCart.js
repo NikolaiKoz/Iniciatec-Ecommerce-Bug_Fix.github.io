@@ -16,6 +16,8 @@ const addCart = data => {
         const fragment = document.createDocumentFragment();
     if(data.length == 0) {
         cart.appendChild(template);
+    }else if(data.length === null) {
+        cart.appendChild(template);
     }else{
     data.forEach(item => {
         template.querySelector('img').src = item.image;
@@ -41,13 +43,85 @@ addCart(data);
 const cartNumber = document.getElementById("cartNumber")
 const fullShipment = document.getElementById("fullShipment")
 
+        cart.addEventListener('click', e => {
+            btnAction(e)
+        })
 
-const newTotalCartPrice = (newValue) => {
-    let totalLS = JSON.parse(localStorage.getItem("Total in Cart"))
-    totalLS = Number(newValue)
-    localStorage.setItem("Total in Cart", JSON.stringify(totalLS));
-}
-/** 
+        console.log(data)
+        const btnAction = (e) => {
+            const data = JSON.parse(localStorage.getItem('Products in Cart'));
+            //aumentar cantidad de producto
+            if(e.target.classList.contains('addItem')){
+                e.preventDefault()
+                data.forEach(item => {
+                    if(item.id === e.target.id){
+                        if(item.quantity < item.stock){
+                            item.quantity++;
+                        }
+                    }
+                    localStorage.removeItem("Products in Cart");
+                    localStorage.setItem('Products in Cart', JSON.stringify(data))
+                        cart.textContent = ''
+                        cartNumber.textContent = ''
+                        fullShipment.textContent = ''
+                        addDatesCart(data)
+                        addCart(data); 
+                })
+            }
+            // disminuir cantidad de producto
+            if(e.target.classList.contains('subtractItem')){
+                e.preventDefault()
+                data.forEach(item => {
+                    if(item.quantity !== 0){
+                        if(item.id === e.target.id){
+                            item.quantity--;
+                        localStorage.removeItem("Products in Cart");
+                        localStorage.setItem('Products in Cart', JSON.stringify(data))
+                        cart.textContent = ''
+                        cartNumber.textContent = ''
+                        fullShipment.textContent = ''
+                        addDatesCart(data)
+                        addCart(data); 
+                        }
+                    }else{
+                        const data = JSON.parse(localStorage.getItem('Products in Cart'));
+                        e.preventDefault()
+                        const dataFilter = data.filter(element => element.id !== (e.target.id))
+                        localStorage.removeItem("Products in Cart");
+                        localStorage.setItem('Products in Cart', JSON.stringify(dataFilter))
+                        cart.textContent = ''
+                        cartNumber.textContent = ''
+                        fullShipment.textContent = ''
+                        addDatesCart(dataFilter)
+                        addCart(dataFilter); 
+                        if(dataFilter.length == 0){
+                            location.reload()
+                    }
+                    }
+                })
+            }
+            //borrar el articulo
+            if(e.target.classList.contains('delet')){
+                e.preventDefault()
+                const dataFilter = data.filter(element => element.id !== (e.target.id))
+                console.log("dataFilter",dataFilter)
+                cart.textContent = ''
+                cartNumber.textContent = ''
+                fullShipment.textContent = ''
+                addDatesCart(dataFilter)
+                addCart(dataFilter); 
+                if(dataFilter.length == 0){
+                    location.reload()
+            }
+            localStorage.removeItem("Products in Cart");
+            localStorage.setItem('Products in Cart', JSON.stringify(dataFilter))
+            
+            console.log("data",data)
+        }
+    }
+
+
+    /** 
  * 
  * @param objeto recorre el objeto y busca los que estan en el carrito
  * @returns el valor total de la compra
@@ -66,128 +140,53 @@ const addDatesCart = data => {
     p.innerHTML = "$" + allPriceCart
     p.className = "allPriceCart"
     fullShipment.appendChild(p)
-    let newValue = fullShipment.textContent.split("$")
-    newTotalCartPrice(newValue[newValue.length - 1])
-    console.log(newValue[newValue.length - 1])
 }
 addDatesCart(data)
 
-        //botones de comprar
-        const purchaseButtom = (data) => {
-            const purchaseBTN = document.getElementById("buttomPurchase")
 
-            purchaseBTN.addEventListener('click', ()=>{
-                if(data.length > 0){
-                    Swal.fire({
-                        title: 'Are you sure?',
-                        text: "Do you want to buy the cart?",
-                        icon: 'question',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Yes, purchase!'
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                            Swal.fire(
-                                'Purchase!',
-                                'success'
-                            )
-                            setTimeout(function(){
-                                localStorage.removeItem("Products in Cart");
-                                localStorage.removeItem("Total in Cart");
-                                location.href ="../index.html";
-                            }, 1000);
-                            }
-                        })
-                }else{
-                    Swal.fire({
-                        title: 'Not products in Cart',
-                        text: "Impossible to make the purchase",
-                        icon: 'error',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'More products'
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                location.href ="../index.html";
-                            }
-                        })
-                }
-            })
-        }
-        purchaseButtom(data)
 
-        cart.addEventListener('click', e => {
-            btnAction(e)
-        })
-
-        console.log(data)
-        const btnAction = (e) => {
-            //aumentar cantidad de producto
-            if(e.target.classList.contains('addItem')){
-                e.preventDefault()
-                data.forEach(item => {
-                    if(item.id === e.target.id){
-                        if(item.quantity < item.stock){
-                            item.quantity++;
-                        }
-                    }
-                    localStorage.removeItem("Products in Cart");
-                    localStorage.setItem('Products in Cart', JSON.stringify(data))
-                    cart.textContent = ''
-                    addCart(data); 
-                })
-            }
-            // disminuir cantidad de producto
-            if(e.target.classList.contains('subtractItem')){
-                e.preventDefault()
-                data.forEach(item => {
-                    if(item.quantity !== 0){
-                        if(item.id === e.target.id){
-                            item.quantity--;
-                        localStorage.removeItem("Products in Cart");
-                        localStorage.setItem('Products in Cart', JSON.stringify(data))
-                        cart.textContent = ''
-                        addCart(data);
-                        }
-                    }else{
-                        const data2 = data.filter(element => element.id !== (e.target.id))
-                        localStorage.removeItem("Products in Cart");
-                        localStorage.setItem('Products in Cart', JSON.stringify(data2))
-                        cart.textContent = ''
-                        location. reload()
-                        addCart(data);
-                    }
-                })
-            }
-            //borrar el articulo
-            if(e.target.classList.contains('delet')){
-                e.preventDefault()
-                const data2 = data.filter(element => element.id !== (e.target.id))
-                localStorage.removeItem("Products in Cart");
-                localStorage.setItem('Products in Cart', JSON.stringify(data2))
-                cart.textContent = ''
-                location. reload()
-                addCart(data);
-            }
-        }
-
-//funcion para borrar el producto seleccionado
-/* const deleteButtoms = data => {
-    const deleteCartItems = document.querySelectorAll(".delet");
+            //botones de comprar
+            const purchaseButtom = (data) => {
+                const purchaseBTN = document.getElementById("buttomPurchase")
     
-    //botones para borrar el producto
-    deleteCartItems.forEach((cartBtn)=>{
-        cartBtn.addEventListener('click', ()=>{
-            data = data.filter(element => element.id !== cartBtn.id)
-            localStorage.removeItem("Products in Cart");
-            localStorage.setItem('Products in Cart', JSON.stringify(data))
-            cart.textContent = ''
-            location. reload()
-            console.log(fullShipment.textContent)
-            addCart(data);  
-        })
-    })
-    }
-    deleteButtoms(data) */
+                purchaseBTN.addEventListener('click', ()=>{
+                    if(data.length > 0){
+                        Swal.fire({
+                            title: 'Are you sure?',
+                            text: "Do you want to buy the cart?",
+                            icon: 'question',
+                            showCancelButton: true,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Yes, purchase!'
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                Swal.fire(
+                                    'Purchase!',
+                                    'success'
+                                )
+                                setTimeout(function(){
+                                    localStorage.removeItem("Products in Cart");
+                                    localStorage.removeItem("Total in Cart");
+                                    location.href ="../index.html";
+                                }, 1000);
+                                }
+                            })
+                    }else{
+                        Swal.fire({
+                            title: 'Not products in Cart',
+                            text: "Impossible to make the purchase",
+                            icon: 'error',
+                            showCancelButton: true,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'More products'
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    location.href ="../index.html";
+                                }
+                            })
+                    }
+                })
+            }
+            purchaseButtom(data)
