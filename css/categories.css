@@ -70,6 +70,12 @@
     transition: all 4s ease-in-out;
     display: none;
 }
+@media screen and (max-width: 767px) {
+    .contact-window{
+        bottom: 1rem;
+        left: 1rem;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .userData{
@@ -79,8 +85,15 @@
     .userInfoContainer{
         width: 30%;
     }
+    .container-menu{
+        display: none;
+    }
     #menu_icon{
         display: none;
+    }
+    .contact-window{
+        bottom: 1rem;
+        right: 1rem;
     }
     .menu_container{
         position: static;
