@@ -47,7 +47,6 @@ const fullShipment = document.getElementById("fullShipment")
             btnAction(e)
         })
 
-        console.log(data)
         const btnAction = (e) => {
             const data = JSON.parse(localStorage.getItem('Products in Cart'));
             //aumentar cantidad de producto
@@ -131,7 +130,6 @@ const fullShipment = document.getElementById("fullShipment")
             if(e.target.classList.contains('delet')){
                 e.preventDefault()
                 const dataFilter = data.filter(element => element.id !== (e.target.id))
-                console.log("dataFilter",dataFilter)
                 cart.textContent = ''
                 cartNumber.textContent = ''
                 fullShipment.textContent = ''
@@ -170,7 +168,6 @@ const fullShipment = document.getElementById("fullShipment")
             localStorage.removeItem("Products in Cart");
             localStorage.setItem('Products in Cart', JSON.stringify(dataFilter))
             
-            console.log("data",data)
         }
     }
 
@@ -193,6 +190,7 @@ const addDatesCart = data => {
     let p = document.createElement("p");
     p.innerHTML = "$" + allPriceCart
     p.className = "allPriceCart"
+    localStorage.setItem("Total in Cart", JSON.stringify(allPriceCart))
     fullShipment.appendChild(p)
 }
 addDatesCart(data)
