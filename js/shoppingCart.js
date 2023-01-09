@@ -95,7 +95,34 @@ const fullShipment = document.getElementById("fullShipment")
                         addDatesCart(dataFilter)
                         addCart(dataFilter); 
                         if(dataFilter.length == 0){
-                            location.reload()
+                            cart.textContent = ''
+        
+                cart.innerHTML = `
+                            <div class="item">
+                            <div class="imgDiv">
+                                <img src="https://cdni.iconscout.com/illustration/free/thumb/empty-cart-4085814-3385483.png">
+                            </div>
+                            <div class="dataItem">
+                                <p class="descriptionItem">Nothing around here? <br>Add products to cart.</p>
+                                <p class="price"></p>
+                                <div class="buttomsItem">
+                                    <a class="btn btn-primary delet" role="button" data-bs-toggle="button">Delete</a>
+                                    <a href="../index.html" class="btn btn-primary" role="button" data-bs-toggle="button">More products</a>
+                                </div>
+                            </div>
+                            <div class="counterItem">
+                                <a href="#" class="btn btn-primary subtractItem" role="button" data-bs-toggle="button">-</a>
+                                <p class="quantity">N°</p>
+                                <a href="#" class="btn btn-primary addItem" role="button" data-bs-toggle="button">+</a>
+                                <div class="stock">
+                                <b>Stock</b>
+                            </div>
+                            </div>
+                            <div>
+                                <p class="allValue" ></p>
+                            </div>
+                        </div>
+                            `
                     }
                     }
                 })
@@ -111,7 +138,34 @@ const fullShipment = document.getElementById("fullShipment")
                 addDatesCart(dataFilter)
                 addCart(dataFilter); 
                 if(dataFilter.length == 0){
-                    location.reload()
+                    cart.textContent = ''
+
+        cart.innerHTML = `
+                    <div class="item">
+                    <div class="imgDiv">
+                        <img src="https://cdni.iconscout.com/illustration/free/thumb/empty-cart-4085814-3385483.png">
+                    </div>
+                    <div class="dataItem">
+                        <p class="descriptionItem">Nothing around here? <br>Add products to cart.</p>
+                        <p class="price"></p>
+                        <div class="buttomsItem">
+                            <a class="btn btn-primary delet" role="button" data-bs-toggle="button">Delete</a>
+                            <a href="../index.html" class="btn btn-primary" role="button" data-bs-toggle="button">More products</a>
+                        </div>
+                    </div>
+                    <div class="counterItem">
+                        <a href="#" class="btn btn-primary subtractItem" role="button" data-bs-toggle="button">-</a>
+                        <p class="quantity">N°</p>
+                        <a href="#" class="btn btn-primary addItem" role="button" data-bs-toggle="button">+</a>
+                        <div class="stock">
+                        <b>Stock</b>
+                    </div>
+                    </div>
+                    <div>
+                        <p class="allValue" ></p>
+                    </div>
+                </div>
+                    `
             }
             localStorage.removeItem("Products in Cart");
             localStorage.setItem('Products in Cart', JSON.stringify(dataFilter))
