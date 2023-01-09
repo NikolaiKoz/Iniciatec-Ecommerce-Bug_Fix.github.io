@@ -47,7 +47,6 @@ const fullShipment = document.getElementById("fullShipment")
             btnAction(e)
         })
 
-        console.log(data)
         const btnAction = (e) => {
             const data = JSON.parse(localStorage.getItem('Products in Cart'));
             //aumentar cantidad de producto
@@ -123,6 +122,7 @@ const fullShipment = document.getElementById("fullShipment")
                             </div>
                         </div>
                             `
+                            purchaseButtom(dataFilter)
                     }
                     }
                 })
@@ -140,6 +140,7 @@ const fullShipment = document.getElementById("fullShipment")
                 if(dataFilter.length == 0){
                     cart.textContent = ''
 
+                    const template = document.querySelector("#templateCartItem").content;
         cart.innerHTML = `
                     <div class="item">
                     <div class="imgDiv">
@@ -169,8 +170,7 @@ const fullShipment = document.getElementById("fullShipment")
             }
             localStorage.removeItem("Products in Cart");
             localStorage.setItem('Products in Cart', JSON.stringify(dataFilter))
-            
-            console.log("data",data)
+            purchaseButtom(dataFilter)
         }
     }
 
@@ -204,7 +204,7 @@ addDatesCart(data)
                 const purchaseBTN = document.getElementById("buttomPurchase")
     
                 purchaseBTN.addEventListener('click', ()=>{
-                    if(data.length > 0){
+                    if(data.length > 0 /* || dataFilter.length > 0 */) {
                         Swal.fire({
                             title: 'Are you sure?',
                             text: "Do you want to buy the cart?",
