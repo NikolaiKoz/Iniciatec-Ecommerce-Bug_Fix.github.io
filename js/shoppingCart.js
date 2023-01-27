@@ -16,6 +16,8 @@ const addCart = data => {
         const fragment = document.createDocumentFragment();
     if(data.length == 0) {
         cart.appendChild(template);
+    }else if(data.length === null) {
+        cart.appendChild(template);
     }else{
     data.forEach(item => {
         template.querySelector('img').src = item.image;
@@ -40,6 +42,7 @@ addCart(data);
 
 const cartNumber = document.getElementById("cartNumber")
 const fullShipment = document.getElementById("fullShipment")
+
 
 
 const newTotalCartPrice = (newValue) => {
@@ -203,8 +206,8 @@ addDatesCart(data)
             btnAction(e)
         })
 
-        console.log(data)
         const btnAction = (e) => {
+            const data = JSON.parse(localStorage.getItem('Products in Cart'));
             //aumentar cantidad de producto
             if(e.target.classList.contains('addItem')){
                 e.preventDefault()
@@ -216,59 +219,188 @@ addDatesCart(data)
                     }
                     localStorage.removeItem("Products in Cart");
                     localStorage.setItem('Products in Cart', JSON.stringify(data))
-                    cart.textContent = ''
-                    addCart(data); 
+                        cart.textContent = ''
+                        cartNumber.textContent = ''
+                        fullShipment.textContent = ''
+                        addDatesCart(data)
+                        addCart(data);
                 })
             }
             // disminuir cantidad de producto
             if(e.target.classList.contains('subtractItem')){
                 e.preventDefault()
                 data.forEach(item => {
-                    if(item.quantity !== 0){
+                    if(item.quantity !== 1){
                         if(item.id === e.target.id){
                             item.quantity--;
                         localStorage.removeItem("Products in Cart");
                         localStorage.setItem('Products in Cart', JSON.stringify(data))
                         cart.textContent = ''
-                        addCart(data);
+                        cartNumber.textContent = ''
+                        fullShipment.textContent = ''
+                        addDatesCart(data)
+                        addCart(data); 
                         }
                     }else{
-                        const data2 = data.filter(element => element.id !== (e.target.id))
+                        const data = JSON.parse(localStorage.getItem('Products in Cart'));
+                        e.preventDefault()
+                        const dataFilter = data.filter(element => element.id !== (e.target.id))
                         localStorage.removeItem("Products in Cart");
-                        localStorage.setItem('Products in Cart', JSON.stringify(data2))
+                        localStorage.setItem('Products in Cart', JSON.stringify(dataFilter))
                         cart.textContent = ''
-                        location. reload()
-                        addCart(data);
+                        cartNumber.textContent = ''
+                        fullShipment.textContent = ''
+                        addDatesCart(dataFilter)
+                        addCart(dataFilter); 
+                        if(dataFilter.length == 0){
+                            cart.textContent = ''
+        
+                cart.innerHTML = `
+                            <div class="item">
+                            <div class="imgDiv">
+                                <img src="https://cdni.iconscout.com/illustration/free/thumb/empty-cart-4085814-3385483.png">
+                            </div>
+                            <div class="dataItem">
+                                <p class="descriptionItem">Nothing around here? <br>Add products to cart.</p>
+                                <p class="price"></p>
+                                <div class="buttomsItem">
+                                    <a class="btn btn-primary delet" role="button" data-bs-toggle="button">Delete</a>
+                                    <a href="../index.html" class="btn btn-primary" role="button" data-bs-toggle="button">More products</a>
+                                </div>
+                            </div>
+                            <div class="counterItem">
+                                <a href="#" class="btn btn-primary subtractItem" role="button" data-bs-toggle="button">-</a>
+                                <p class="quantity">N°</p>
+                                <a href="#" class="btn btn-primary addItem" role="button" data-bs-toggle="button">+</a>
+                                <div class="stock">
+                                <b>Stock</b>
+                            </div>
+                            </div>
+                            <div>
+                                <p class="allValue" ></p>
+                            </div>
+                        </div>
+                            `
+                            purchaseButtom(dataFilter)
+                    }
                     }
                 })
             }
             //borrar el articulo
             if(e.target.classList.contains('delet')){
                 e.preventDefault()
-                const data2 = data.filter(element => element.id !== (e.target.id))
-                localStorage.removeItem("Products in Cart");
-                localStorage.setItem('Products in Cart', JSON.stringify(data2))
+                const dataFilter = data.filter(element => element.id !== (e.target.id))
                 cart.textContent = ''
-                location. reload()
-                addCart(data);
-            }
-        }
+                cartNumber.textContent = ''
+                fullShipment.textContent = ''
+                addDatesCart(dataFilter)
+                addCart(dataFilter); 
+                if(dataFilter.length == 0){
+                    cart.textContent = ''
 
-//funcion para borrar el producto seleccionado
-/* const deleteButtoms = data => {
-    const deleteCartItems = document.querySelectorAll(".delet");
-    
-    //botones para borrar el producto
-    deleteCartItems.forEach((cartBtn)=>{
-        cartBtn.addEventListener('click', ()=>{
-            data = data.filter(element => element.id !== cartBtn.id)
+                    const template = document.querySelector("#templateCartItem").content;
+        cart.innerHTML = `
+                    <div class="item">
+                    <div class="imgDiv">
+                        <img src="https://cdni.iconscout.com/illustration/free/thumb/empty-cart-4085814-3385483.png">
+                    </div>
+                    <div class="dataItem">
+                        <p class="descriptionItem">Nothing around here? <br>Add products to cart.</p>
+                        <p class="price"></p>
+                        <div class="buttomsItem">
+                            <a class="btn btn-primary delet" role="button" data-bs-toggle="button">Delete</a>
+                            <a href="../index.html" class="btn btn-primary" role="button" data-bs-toggle="button">More products</a>
+                        </div>
+                    </div>
+                    <div class="counterItem">
+                        <a href="#" class="btn btn-primary subtractItem" role="button" data-bs-toggle="button">-</a>
+                        <p class="quantity">N°</p>
+                        <a href="#" class="btn btn-primary addItem" role="button" data-bs-toggle="button">+</a>
+                        <div class="stock">
+                        <b>Stock</b>
+                    </div>
+                    </div>
+                    <div>
+                        <p class="allValue" ></p>
+                    </div>
+                </div>
+                    `
+            }
             localStorage.removeItem("Products in Cart");
-            localStorage.setItem('Products in Cart', JSON.stringify(data))
-            cart.textContent = ''
-            location. reload()
-            console.log(fullShipment.textContent)
-            addCart(data);  
-        })
-    })
+            localStorage.setItem('Products in Cart', JSON.stringify(dataFilter))
+            
+            purchaseButtom(dataFilter)
+        }
     }
-    deleteButtoms(data) */
+
+
+    /** 
+ * 
+ * @param objeto recorre el objeto y busca los que estan en el carrito
+ * @returns el valor total de la compra
+ * 
+**/
+const addDatesCart = data => {
+    let div = document.createElement("div");
+    div.innerHTML = `Cart(${data.length})`
+    cartNumber.appendChild(div)
+
+    //sumo el total de los productos a comprar
+    let allPriceCart = data.reduce((acc, item) =>  acc + (item.price * item.quantity) , 0)
+    // let allPriceCart = JSON.parse(localStorage.getItem("Total in Cart"))
+
+    let p = document.createElement("p");
+    p.innerHTML = "$" + allPriceCart
+    p.className = "allPriceCart"
+    localStorage.setItem("Total in Cart", JSON.stringify(allPriceCart))
+    fullShipment.appendChild(p)
+}
+addDatesCart(data)
+
+
+
+            //botones de comprar
+            const purchaseButtom = (data) => {
+                const purchaseBTN = document.getElementById("buttomPurchase")
+    
+                purchaseBTN.addEventListener('click', ()=>{
+                    if(data.length > 0 /* || dataFilter.length > 0 */) {
+                        Swal.fire({
+                            title: 'Are you sure?',
+                            text: "Do you want to buy the cart?",
+                            icon: 'question',
+                            showCancelButton: true,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Yes, purchase!'
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                Swal.fire(
+                                    'Purchase!',
+                                    'success'
+                                )
+                                setTimeout(function(){
+                                    localStorage.removeItem("Products in Cart");
+                                    localStorage.removeItem("Total in Cart");
+                                    location.href ="../index.html";
+                                }, 1000);
+                                }
+                            })
+                    }else{
+                        Swal.fire({
+                            title: 'Not products in Cart',
+                            text: "Impossible to make the purchase",
+                            icon: 'error',
+                            showCancelButton: true,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'More products'
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    location.href ="../index.html";
+                                }
+                            })
+                    }
+                })
+            }
+            purchaseButtom(data)

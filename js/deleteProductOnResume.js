@@ -59,7 +59,6 @@ const deleteProductOnResume = () => {
              * @note: The total in cart is saved in localStorage as a string.
              */
             localStorage.setItem("Total in Cart", JSON.stringify(totalInCart));
-            console.log(totalInCart)
 
             /**
              * @description: New products in cart.
