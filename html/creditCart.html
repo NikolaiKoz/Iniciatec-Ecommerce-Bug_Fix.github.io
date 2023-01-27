@@ -13,10 +13,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/bug_fix_logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/resetDOM.css" />
+  <link rel="stylesheet" href="../css/generalStyles.css">
+  <link rel="stylesheet" href="../css/userMenu.css">
+  <link rel="stylesheet" href="../css/colorsLight.css">
+  <link rel="stylesheet" href="../css/banner.css">
+  <link rel="stylesheet" href="../css/card.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/contact.css">
+  <link rel="shortcut icon" href="../assets/img/logo/bug_fix_logo.png" type="image/x-icon">
   <link rel="stylesheet" href="../css/creditCard.css">
+
 
   <title>Frontend Mentor | Interactive card details form</title>
 
@@ -24,6 +33,24 @@
 </head>
 
 <body id="body">
+
+    <h1 class="neonText delete">BUG FIX</h1>
+    <header class="header">
+      <section class="logoAndSearchContainer contact-logo">
+        <picture class="imgContainerLogo">
+          <a href="../index.html">
+              <img
+                class="imgLogo"
+                src="../assets/img/logo/bug_fix_logo.png"
+                alt="BugFix Logo"
+              />
+          </a>
+        </picture>
+
+    </header>
+
+   <div class="hr"></div>
+
 
   <main>
     <div class="container">
@@ -80,8 +107,8 @@
             class="inputs"
             type="number"
             oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
-            minlength="19"
-            maxlength="19"
+            minlength="16"
+            maxlength="16"
             placeholder="e.g 1234 5678 9123 0000"
             id="cardNumberInput"
             required
@@ -134,7 +161,7 @@
           <button id="submit_btn" class="btn" type="submit">Confirm</button>
         </form>
         <figure id="thank" class="thank hidden">
-          <img src="./images/icon-complete.svg" alt="complete">
+          <img src="../assets/img/icon-complete.svg" alt="complete">
           <figcaption class="thank">
             <span
             id="thankYou"
@@ -143,19 +170,38 @@
             Thank you!
           </span>
           <span class="messege">
-            We've added your card details Continue
+            Your order is being processed, you will receive an email with the details soon.
           </span>
           </figcaption>
-          <button id="continue_btn" class="btn">Continue</button>
+          <button id="continue_btn" class="btn"><a href="../index.html" style="color: #fff;">Continue</a></button>
         </figure>
       </div>
     </div>
   </main>
 
+  <div class="hr"></div>
 
 
-  <script src="../js/darkMode.js"></script>
-  <script src="../js/valuesAndChecks.js"></script>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <picture class="imgContainerLogo">
+            <img
+              class="imgLogo"
+              src="../assets/img/logo/bug_fix_logo.png"
+              alt="BugFix Logo"
+            />
+          </picture>
+
+        <section class="authors">
+          <h3>Authors</h3>
+          <ul id="list-authors">
+          </ul>
+          </section>
+
+          <script src="https://kit.fontawesome.com/7363efb40e.js" crossorigin="anonymous"></script>
+          <script src="../js/renderFooter.js"></script>
+          <script src="../js/darkMode.js"></script>
+          <script src="../js/valuesAndChecks.js"></script>
 </body>
 
 </html>

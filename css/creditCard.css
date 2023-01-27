@@ -414,33 +414,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 
-/* ATTRIBUTION */
-
-footer{
-    background-color            : darkgray;
-    height                      : 50px;
-    display                     : flex;
-    justify-content             : center;
-    align-items                 : center;
-    box-shadow                  : rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    max-width                   : 80%;
-    margin                      : 20px auto;
-}
-
-footer > .attribution > p{
-    margin-bottom               : 5px;
-}
-
-.attribution {
-    font-family                 : 'Barlow Semi Condensed', sans-serif;
-    font-weight                 : 500;
-    font-size                   : 13px;
-    text-align                  : center;
-}
-
-.attribution a {
-    color                       : hsl(228, 45%, 44%);
-}
 
 
 

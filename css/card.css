@@ -106,17 +106,17 @@
 }
 
 .info_card::-webkit-scrollbar {
-    width: 8px;            
+    width: 8px;
   }
 .info_card::-webkit-scrollbar-track {
-    background: rgba(117, 16, 175, 0.6);   
-    border-radius: 20px;            
+    background: rgba(117, 16, 175, 0.6);
+    border-radius: 20px;
   }
 
 .info_card::-webkit-scrollbar-thumb {
-    background-color: var(--text);  
-    border-radius: 20px;      
-    border: 3px solid  var(--Fuccia);  
+    background-color: var(--text);
+    border-radius: 20px;
+    border: 3px solid  var(--Fuccia);
   }
 
 .card__Container footer .container__PriceAndBtn{
