@@ -146,3 +146,8 @@ cardYearInput.addEventListener('keyup', setCardYear);
 cardCvcInput.addEventListener('keyup', setCardCvc);
 
 submitBtn.addEventListener('click', handleSubmit);
+
+continueBtn.addEventListener('click', () => {
+  localStorage.removeItem("Products in Cart");
+  localStorage.removeItem("Total in Cart");
+})
