@@ -98,6 +98,7 @@
 .container-footerCart{
     width: 100%;
     height: fit-content;
+    background-color: #fff;
     position: absolute;
     bottom: 0;
     text-align: center;

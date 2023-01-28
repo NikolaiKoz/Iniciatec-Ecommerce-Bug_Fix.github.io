@@ -26,7 +26,7 @@ const alertCart = () => {
      * @note: The alert cart is shown in the resume cart button.
      * @note: The alert cart is shown in the delete product button.
      */
-    if (ProductsInCart.length === 0) {
+    if (ProductsInCart === null || ProductsInCart.length === 0) {
         cartAlert.classList.add('delete');
     } else {
         cartAlert.classList.remove('delete');

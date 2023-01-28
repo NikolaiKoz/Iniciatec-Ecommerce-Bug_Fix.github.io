@@ -47,7 +47,6 @@ const fullShipment = document.getElementById("fullShipment")
             btnAction(e)
         })
 
-        console.log(data)
         const btnAction = (e) => {
             const data = JSON.parse(localStorage.getItem('Products in Cart'));
             //aumentar cantidad de producto
@@ -65,14 +64,14 @@ const fullShipment = document.getElementById("fullShipment")
                         cartNumber.textContent = ''
                         fullShipment.textContent = ''
                         addDatesCart(data)
-                        addCart(data); 
+                        addCart(data);
                 })
             }
             // disminuir cantidad de producto
             if(e.target.classList.contains('subtractItem')){
                 e.preventDefault()
                 data.forEach(item => {
-                    if(item.quantity !== 0){
+                    if(item.quantity !== 1){
                         if(item.id === e.target.id){
                             item.quantity--;
                         localStorage.removeItem("Products in Cart");
@@ -95,7 +94,35 @@ const fullShipment = document.getElementById("fullShipment")
                         addDatesCart(dataFilter)
                         addCart(dataFilter); 
                         if(dataFilter.length == 0){
-                            location.reload()
+                            cart.textContent = ''
+        
+                cart.innerHTML = `
+                            <div class="item">
+                            <div class="imgDiv">
+                                <img src="https://cdni.iconscout.com/illustration/free/thumb/empty-cart-4085814-3385483.png">
+                            </div>
+                            <div class="dataItem">
+                                <p class="descriptionItem">Nothing around here? <br>Add products to cart.</p>
+                                <p class="price"></p>
+                                <div class="buttomsItem">
+                                    <a class="btn btn-primary delet" role="button" data-bs-toggle="button">Delete</a>
+                                    <a href="../index.html" class="btn btn-primary" role="button" data-bs-toggle="button">More products</a>
+                                </div>
+                            </div>
+                            <div class="counterItem">
+                                <a href="#" class="btn btn-primary subtractItem" role="button" data-bs-toggle="button">-</a>
+                                <p class="quantity">N°</p>
+                                <a href="#" class="btn btn-primary addItem" role="button" data-bs-toggle="button">+</a>
+                                <div class="stock">
+                                <b>Stock</b>
+                            </div>
+                            </div>
+                            <div>
+                                <p class="allValue" ></p>
+                            </div>
+                        </div>
+                            `
+                            purchaseButtom(dataFilter)
                     }
                     }
                 })
@@ -104,19 +131,46 @@ const fullShipment = document.getElementById("fullShipment")
             if(e.target.classList.contains('delet')){
                 e.preventDefault()
                 const dataFilter = data.filter(element => element.id !== (e.target.id))
-                console.log("dataFilter",dataFilter)
                 cart.textContent = ''
                 cartNumber.textContent = ''
                 fullShipment.textContent = ''
                 addDatesCart(dataFilter)
                 addCart(dataFilter); 
                 if(dataFilter.length == 0){
-                    location.reload()
+                    cart.textContent = ''
+
+                    const template = document.querySelector("#templateCartItem").content;
+        cart.innerHTML = `
+                    <div class="item">
+                    <div class="imgDiv">
+                        <img src="https://cdni.iconscout.com/illustration/free/thumb/empty-cart-4085814-3385483.png">
+                    </div>
+                    <div class="dataItem">
+                        <p class="descriptionItem">Nothing around here? <br>Add products to cart.</p>
+                        <p class="price"></p>
+                        <div class="buttomsItem">
+                            <a class="btn btn-primary delet" role="button" data-bs-toggle="button">Delete</a>
+                            <a href="../index.html" class="btn btn-primary" role="button" data-bs-toggle="button">More products</a>
+                        </div>
+                    </div>
+                    <div class="counterItem">
+                        <a href="#" class="btn btn-primary subtractItem" role="button" data-bs-toggle="button">-</a>
+                        <p class="quantity">N°</p>
+                        <a href="#" class="btn btn-primary addItem" role="button" data-bs-toggle="button">+</a>
+                        <div class="stock">
+                        <b>Stock</b>
+                    </div>
+                    </div>
+                    <div>
+                        <p class="allValue" ></p>
+                    </div>
+                </div>
+                    `
             }
             localStorage.removeItem("Products in Cart");
             localStorage.setItem('Products in Cart', JSON.stringify(dataFilter))
             
-            console.log("data",data)
+            purchaseButtom(dataFilter)
         }
     }
 
@@ -139,6 +193,7 @@ const addDatesCart = data => {
     let p = document.createElement("p");
     p.innerHTML = "$" + allPriceCart
     p.className = "allPriceCart"
+    localStorage.setItem("Total in Cart", JSON.stringify(allPriceCart))
     fullShipment.appendChild(p)
 }
 addDatesCart(data)
@@ -150,7 +205,7 @@ addDatesCart(data)
                 const purchaseBTN = document.getElementById("buttomPurchase")
     
                 purchaseBTN.addEventListener('click', ()=>{
-                    if(data.length > 0){
+                    if(data.length > 0 /* || dataFilter.length > 0 */) {
                         Swal.fire({
                             title: 'Are you sure?',
                             text: "Do you want to buy the cart?",
