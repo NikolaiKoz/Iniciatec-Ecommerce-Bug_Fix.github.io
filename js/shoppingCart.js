@@ -229,7 +229,6 @@ addDatesCart(data)
             if(e.target.classList.contains('subtractItem')){
                 e.preventDefault()
                 data.forEach(item => {
-                    if(item.quantity !== 1){
                         if(item.id === e.target.id){
                             item.quantity--;
                         localStorage.removeItem("Products in Cart");
@@ -239,8 +238,7 @@ addDatesCart(data)
                         fullShipment.textContent = ''
                         addDatesCart(data)
                         addCart(data); 
-                        }
-                    }else{
+                    }else if(item.id === e.target.id && item.quantity == 1){
                         const data = JSON.parse(localStorage.getItem('Products in Cart'));
                         e.preventDefault()
                         const dataFilter = data.filter(element => element.id !== (e.target.id))
