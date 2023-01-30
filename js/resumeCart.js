@@ -27,7 +27,7 @@ const resumeCart = () => {
 
               <div class="container-productData_down">
                 <div class="quantity-box">
-                  <span class="quantity">${product.quantity}</span>
+                  <span class="quantity">Units: ${product.quantity}</span>
                 </div>
                 <img class="deleteProduct-btn" src="./assets/img/icons/delete.png" alt="delete icon">
 

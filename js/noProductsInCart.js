@@ -29,9 +29,13 @@ const noProductsInCart = () => {
          */
         if (localStorageData == null || localStorageData.length === 0) {
             containerResumeCart.innerHTML = `
-            <img style="width: 60%;" src="./assets/img/alerts/WhatsApp Image 2022-12-28 at 13.48.57.jpeg" alt="empty cart icon" class="emptyCartImg">
-            <p>Your cart is empty</p>
-            <p>Come back to buy</p>
+            <div class="emptyCart_container">
+                <img src="./assets/img/alerts/WhatsApp Image 2022-12-28 at 13.48.57.jpeg" alt="empty cart icon" class="emptyCartImg">
+                <div>
+                    <p style="text-align: center">Your cart is empty</p>
+                    <p style="text-align: center;">Come back to buy</p>
+                </div>
+            </div>
             `
         }
     } catch (error) {
