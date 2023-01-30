@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- archivos css -->
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/resetDOM.css" />
     <link rel="stylesheet" href="./css/generalStyles.css">
@@ -14,6 +17,7 @@
     <link rel="stylesheet" href="./css/card.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/alertCart.css">
+    <link rel="stylesheet" href="./css/popUps.css">
     <link rel="shortcut icon" href="./assets/img/logo/bug_fix_logo.png" type="image/x-icon">
     <title>Home</title>
   </head>
@@ -46,13 +50,15 @@
           <input id="searchBar" class="inputSearch" type="text" placeholder="Search" />
         </section>
 
-        <figcaption style="display: flex; align-items: center;">
-          <img
-          class="imgIcon margin"
-          src="./assets/img/icons/account.png"
-          alt="Cart icon"
-        />
-        </figcaption>
+        <a href="./html/logIn.html" title="Go to sing in">
+          <figcaption style="display: flex; align-items: center;">
+            <img
+            class="imgIcon margin"
+            src="./assets/img/icons/account.png"
+            alt="Cart icon"
+          />
+          </figcaption>
+        </a>
 
         <!-- carrito -->
         <figure class="imgContainer container-iconCart">
