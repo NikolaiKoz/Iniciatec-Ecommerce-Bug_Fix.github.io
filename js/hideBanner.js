@@ -4,7 +4,8 @@ const hideBanner = ()=>{
     const menuCategories = document.querySelector(".menu_container")
 
     serchBar.addEventListener("change", ()=>{
-        if(screen.width > 875){
+
+
             if (serchBar.value.length != 0){
                 banner.classList.add("animationBannerOut")
                 setTimeout(()=>{
@@ -19,8 +20,6 @@ const hideBanner = ()=>{
                     banner.classList.remove("animationBannerin")
                 }, 1000);
             }
-        }
-        
     })
 }
 
