@@ -41,7 +41,7 @@
     "descriptionProduct": "No extra parts needed. Printer uses a single cartridge, all-in-one, and easy to replace. This simplifies supply management and minimizes the time it takes to change supplies. Consistent execution. Reliable performance. The Phaser 3020 handle large workloads with ease. Less wait time.",
     "stock": 5,
     "category": "Printers",
-    "imageProduct": "https://s3-sa-east-1.amazonaws.com/saasargentina/3Fn4cgSAKVVyiiAAzINT/imagen",
+    "imageProduct": "https://mediaserver.goepson.com/ImConvServlet/imconv/41b56f2a88c5c4832338873b7d360500244f101d/1200Wx1200H?use=banner&hybrisId=B2C&assetDescr=XP2101_690x460_6",
     "idProduct": 6,
     "price": 32999
   },
@@ -50,7 +50,7 @@
     "descriptionProduct": "Volume control: Yes, Headphone jack: Yes, Microphone jack: Yes, Cable length: 1.5 m, Warranty: 9 Months, Power supply: 100 V – 240 V, Audio input: 3.5 mm, Total output power (Ｗ): 10 W (Subwoofer: Subwoofer: 3.5 inch, 6 ohm / Satellites: 2.0 inch x2, 6 ohm Driver Unit: Subwoofer: 25 Hz – 200 Hz / Satellites: 200 Hz – 18 kHz",
     "stock": 10,
     "category": "Speakers",
-    "imageProduct": "https://s3-sa-east-1.amazonaws.com/saasargentina/iiHEqo4V3sbzjo3mQgTQ/imagen",
+    "imageProduct": "https://www.tranza.com/content/images/thumbs/0027821_parlante-genius-sw-21-350-madera_600.jpg",
     "idProduct": 7,
     "price": 9999
   },
@@ -80,5 +80,185 @@
     "imageProduct": "https://medias.musimundo.com/medias/00406061-177748-177748-01.png-177748-01.png-size515?context=bWFzdGVyfGltYWdlc3w0MTgwOTV8aW1hZ2UvcG5nfGhiZi9oZjIvMTAzODA3MjY1MDE0MDYvMDA0MDYwNjEtMTc3NzQ4LTE3Nzc0OF8wMS5wbmctMTc3NzQ4XzAxLnBuZ19zaXplNTE1fGM4YTcyNjI2OTk3MGI2YTQ3ZjhjOTU2NmIwZjVlZmI2MDhjODIwN2I3YTczZmM1ZDk5ODMyMzkwNDU0MzhjNDg",
     "idProduct": 10,
     "price": 65000
+  },
+  {
+    "titleProduct": "Logitech MK270 Wireless Keyboard and Mouse Combo",
+    "descriptionProduct": "Keyboard with wireless mouse, spill-resistant design, durable keys, adjustable stand, numeric keypad.",
+    "imageProduct": "https://http2.mlstatic.com/D_NQ_NP_818970-MLA72126770857_102023-O.webp",
+    "stock": 8,
+    "category": "Keyboards",
+    "idProduct": 11,
+    "price": 7000
+  },
+  {
+    "titleProduct": "Redragon M602 Gaming Mouse",
+    "descriptionProduct": "Gaming mouse with 7 programmable buttons, adjustable DPI up to 7200, RGB backlighting, ergonomic design.",
+    "imageProduct": "https://http2.mlstatic.com/D_NQ_NP_906389-MLA44354283811_122020-O.webp",
+    "stock": 15,
+    "category": "Mouses",
+    "idProduct": 12,
+    "price": 3000
+  },
+  {
+    "titleProduct": "Sony WH-1000XM4 Headphones",
+    "descriptionProduct": "Wireless headphones with noise cancellation, up to 30 hours battery life, high-resolution sound, touch control.",
+    "imageProduct": "https://i.ytimg.com/vi/jBaDt4hN8KI/maxresdefault.jpg",
+    "stock": 6,
+    "category": "Headphones",
+    "idProduct": 13,
+    "price": 45000
+  },
+  {
+    "titleProduct": "Logitech C920 HD Pro Webcam",
+    "descriptionProduct": "Full HD 1080p resolution, autofocus, built-in stereo microphone, compatible with Windows and Mac.",
+    "imageProduct": "https://resource.logitech.com/w_1206,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/webcams/c920s/c920s-feature-2.jpg?v=1",
+    "stock": 12,
+    "category": "Webcams",
+    "idProduct": 14,
+    "price": 8000
+  },
+  {
+    "titleProduct": "HP DeskJet 2720 Multifunction Printer",
+    "descriptionProduct": "Printer, scanner, and copier, Wi-Fi connectivity, mobile printing, easy setup.",
+    "imageProduct": "https://m.media-amazon.com/images/I/71q2DTEnm0L._AC_SL1500_.jpg",
+    "stock": 10,
+    "category": "Printers",
+    "idProduct": 15,
+    "price": 12000
+  },
+  {
+    "titleProduct": "Logitech Z313 Speaker System",
+    "descriptionProduct": "2.1 speaker system, compact subwoofer, wired volume control, easy setup.",
+    "imageProduct": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/9427/9427774cv14d.jpg",
+    "stock": 8,
+    "category": "Speakers",
+    "idProduct": 16,
+    "price": 5500
+  },
+  {
+    "titleProduct": "Corsair K95 RGB Platinum Mechanical Keyboard",
+    "descriptionProduct": "Mechanical keyboard, RGB backlighting, Cherry MX switches, programmable macro keys, aluminum frame.",
+    "imageProduct": "https://i.ytimg.com/vi/9pCi9Oag8SQ/maxresdefault.jpg",
+    "stock": 5,
+    "category": "Keyboards",
+    "idProduct": 17,
+    "price": 25000
+  },
+  {
+    "titleProduct": "LG 27UL500-W Monitor",
+    "descriptionProduct": "27-inch 4K UHD monitor, IPS panel, HDR10 compatibility, AMD FreeSync technology.",
+    "imageProduct": "https://m.media-amazon.com/images/I/71GRpZb6+vL._AC_SL1500_.jpg",
+    "stock": 4,
+    "category": "Monitors",
+    "idProduct": 18,
+    "price": 75000
+  },
+  {
+    "titleProduct": "ASUS VG248QE Gaming Monitor",
+    "descriptionProduct": "24-inch gaming monitor, Full HD resolution, 144Hz, 1ms response time, NVIDIA 3D Vision compatible.",
+    "imageProduct": "https://m.media-amazon.com/images/I/81zs8zJ4MrL._AC_UF1000,1000_QL80_.jpg",
+    "stock": 6,
+    "category": "Monitors",
+    "idProduct": 19,
+    "price": 45000
+  },
+  {
+    "titleProduct": "Canon PIXMA G3110 Multifunction Printer",
+    "descriptionProduct": "Multifunction printer with refillable ink tank system, Wi-Fi connectivity, borderless printing.",
+    "imageProduct": "https://driccoar.vtexassets.com/arquivos/ids/159632/printer-mfcanon-pixma-g3110-wifi-17575.png?v=638459555690900000",
+    "stock": 7,
+    "category": "Printers",
+    "idProduct": 20,
+    "price": 30000
+  },
+  {
+    "titleProduct": "Razer DeathAdder Elite Gaming Mouse",
+    "descriptionProduct": "Ergonomic gaming mouse with 16,000 DPI optical sensor, 7 programmable buttons, and RGB lighting.",
+    "imageProduct": "https://http2.mlstatic.com/D_NQ_NP_795160-MLU74245602337_012024-O.webp",
+    "stock": 20,
+    "category": "Mouses",
+    "idProduct": 21,
+    "price": 6500
+  },
+  {
+    "titleProduct": "SteelSeries Arctis 7 Wireless Gaming Headset",
+    "descriptionProduct": "Wireless gaming headset with 24-hour battery life, DTS Headphone:X v2.0 surround sound, and retractable microphone.",
+    "imageProduct": "https://i.pcmag.com/imagery/reviews/04wGdqpG08Gz371DrsCkj42-1..v1644869466.jpg",
+    "stock": 10,
+    "category": "Headphones",
+    "idProduct": 22,
+    "price": 18000
+  },
+  {
+    "titleProduct": "Microsoft LifeCam HD-3000",
+    "descriptionProduct": "HD webcam with 720p video recording, noise-reducing microphone, and universal attachment base.",
+    "imageProduct": "https://http2.mlstatic.com/D_NQ_NP_625593-MLA73020343359_112023-O.webp",
+    "stock": 15,
+    "category": "Webcams",
+    "idProduct": 23,
+    "price": 4000
+  },
+  {
+    "titleProduct": "Brother HL-L2350DW Monochrome Laser Printer",
+    "descriptionProduct": "Compact laser printer with wireless printing, automatic duplex printing, and 250-sheet paper capacity.",
+    "imageProduct": "https://m.media-amazon.com/images/I/61rNMJYXREL._AC_UF894,1000_QL80_.jpg",
+    "stock": 8,
+    "category": "Printers",
+    "idProduct": 24,
+    "price": 15000
+  },
+  {
+    "titleProduct": "Creative Pebble 2.0 USB-Powered Desktop Speakers",
+    "descriptionProduct": "Compact desktop speakers with far-field drivers, passive radiators, and a 45° elevated sound stage.",
+    "imageProduct": "https://img.creative.com/images/products/hero/creative-pebble-v2/pebble-v2-hero-mobile.jpg?width=750",
+    "stock": 25,
+    "category": "Speakers",
+    "idProduct": 25,
+    "price": 3000
+  },
+  {
+    "titleProduct": "HyperX Alloy FPS Pro Mechanical Gaming Keyboard",
+    "descriptionProduct": "Tenkeyless mechanical keyboard with Cherry MX switches, red LED backlighting, and compact design.",
+    "imageProduct": "https://hard-digital.com.ar/public/files/Teclado%20Mecanico%20Hyperx%20Alloy%20Fps%20Pro%20Negro%20Switch%20Red/4.jpg",
+    "stock": 12,
+    "category": "Keyboards",
+    "idProduct": 26,
+    "price": 9000
+  },
+  {
+    "titleProduct": "Acer Predator XB271HU 27-inch Gaming Monitor",
+    "descriptionProduct": "27-inch WQHD (2560x1440) IPS monitor with 144Hz refresh rate, NVIDIA G-SYNC, and 4ms response time.",
+    "imageProduct": "https://i.pcmag.com/imagery/reviews/03wTZPooyKoiPxWucD1XVC0-3.fit_lim.size_1050x591.v1569472587.jpg",
+    "stock": 5,
+    "category": "Monitors",
+    "idProduct": 27,
+    "price": 80000
+  },
+  {
+    "titleProduct": "Dell UltraSharp U2718Q 27-inch 4K Monitor",
+    "descriptionProduct": "27-inch 4K UHD monitor with InfinityEdge design, HDR support, and adjustable stand.",
+    "imageProduct": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkNvh8oAQ8UBDytNr3T4wGJrUb8nBi1NA3tg&s",
+    "stock": 7,
+    "category": "Monitors",
+    "idProduct": 28,
+    "price": 85000
+  },
+  {
+    "titleProduct": "Epson EcoTank ET-2720 Wireless Color All-in-One Printer",
+    "descriptionProduct": "All-in-one printer with high-capacity ink tanks, wireless printing, and easy setup.",
+    "imageProduct": "https://m.media-amazon.com/images/I/71u519gcMdS._AC_SL1500_.jpg",
+    "stock": 9,
+    "category": "Printers",
+    "idProduct": 29,
+    "price": 20000
+  },
+  {
+    "titleProduct": "JBL Charge 4 Portable Bluetooth Speaker",
+    "descriptionProduct": "Waterproof portable speaker with up to 20 hours of playtime, powerful sound, and USB charge out.",
+    "imageProduct": "https://m.media-amazon.com/images/I/710C7TJxHTL._AC_SL1500_.jpg",
+    "stock": 18,
+    "category": "Speakers",
+    "idProduct": 30,
+    "price": 12000
   }
 ]
